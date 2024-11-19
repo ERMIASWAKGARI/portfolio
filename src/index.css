@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: "Poppins", sans-serif; /* Set Roboto as the font for the whole site */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.nav-link {
+  opacity: 0; /* Initially hidden */
+  animation: slideIn 0.5s forwards; /* Apply the animation */
+}
+
+.nav-link:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.nav-link:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.nav-link:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.nav-link:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.nav-link:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.nav-link:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.nav-link:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+/* Add this to your CSS file */
+.bold-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 3px; /* Adjust thickness as needed */
+  text-decoration-color: var(
+    --your-color-variable
+  ); /* Change to your desired color */
+}
+
+/* styles/globals.css
+
+
+// Primary colors
+text-primary-900 -> #1F2937 (Dark Gray)
+bg-primary -> #4F46E5 (Indigo)
+hover:bg-primary-dark -> #4338CA (Darker Indigo)
+
+// Secondary colors
+bg-secondary -> #14B8A6 (Teal)
+hover:bg-secondary-dark -> #0D9488 (Darker Teal)
+
+// Accent color (optional)
+text-accent -> #F59E0B (Warm Yellow)
+
+// Backgrounds
+bg-gray-50 -> #F3F4F6 (Light Gray)
+bg-white -> #FFFFFF (White)
+
+
+
+*/
