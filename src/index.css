@@ -49,15 +49,6 @@ html {
   animation-delay: 0.7s;
 }
 
-/* Add this to your CSS file */
-.bold-underline {
-  text-decoration: underline;
-  text-decoration-thickness: 3px; /* Adjust thickness as needed */
-  text-decoration-color: var(
-    --your-color-variable
-  ); /* Change to your desired color */
-}
-
 /* styles/globals.css
 
 

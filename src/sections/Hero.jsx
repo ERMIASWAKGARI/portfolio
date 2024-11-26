@@ -1,5 +1,6 @@
 import { Typewriter } from "react-simple-typewriter";
 import Particles from "react-tsparticles";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const Hero = () => {
   return (
@@ -96,50 +97,7 @@ const Hero = () => {
             </button>
           </div>
 
-          {/* Social Media Links */}
-          <div className="mt-6 flex justify-center lg:justify-start space-x-4">
-            {[
-              {
-                href: "https://github.com",
-                label: "GitHub Profile",
-                icon: "fab fa-github",
-              },
-              {
-                href: "https://linkedin.com",
-                label: "LinkedIn Profile",
-                icon: "fab fa-linkedin",
-              },
-              {
-                href: "https://twitter.com",
-                label: "Twitter Profile",
-                icon: "fab fa-twitter",
-              },
-              {
-                href: "https://dev.to",
-                label: "Dev.to Profile",
-                icon: "fab fa-dev",
-              },
-              {
-                href: "https://stackoverflow.com",
-                label: "StackOverflow Profile",
-                icon: "fab fa-stack-overflow",
-              },
-              {
-                href: "https://dribbble.com",
-                label: "Dribbble Profile",
-                icon: "fab fa-dribbble",
-              },
-            ].map(({ href, label, icon }) => (
-              <a
-                key={label}
-                href={href}
-                className="text-secondary-dark dark:text-secondary-light dark:hover:text-primary hover:text-primary"
-                aria-label={label}
-              >
-                <i className={`${icon} fa-2x`}></i>
-              </a>
-            ))}
-          </div>
+          <SocialMediaIcons />
         </div>
 
         {/* Right Section: Image */}

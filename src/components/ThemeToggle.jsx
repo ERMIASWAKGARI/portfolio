@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 const ThemeToggle = () => {
   const [isDark, setIsDark] = useState(false);
@@ -31,21 +31,26 @@ const ThemeToggle = () => {
   return (
     <div
       onClick={toggleTheme}
-      className="fixed left-1 top-1/2 transform -translate-y-1/2 z-50 flex items-center justify-center w-14 h-14 cursor-pointer rounded-full bg-gradient-to-r from-primary to-accent hover:scale-105 transition-all duration-300 ease-in-out shadow-xl"
+      className="fixed left-1 top-1/2 transform -translate-y-1/2 z-50 flex items-center justify-center w-8 h-16 cursor-pointer rounded-full bg-indigo-500 hover:bg-indigo-600 hover:scale-105 transition-all duration-300 ease-in-out shadow-lg"
       aria-label="Toggle theme"
     >
-      {/* Theme icon container */}
+      {/* Switch container (Vertical layout) */}
       <div
-        className={`flex items-center justify-center w-10 h-10 bg-white dark:bg-gray-900 rounded-full shadow-md transform transition-all duration-300 ease-in-out ${
-          isDark ? "translate-x-6" : "translate-x-0"
-        }`}
+        className={`flex items-center justify-center w-7 h-14 rounded-full bg-gray-300 dark:bg-gray-800 p-1 transition-all duration-300 ease-in-out`}
       >
-        {/* Icon: Sun or Moon */}
-        {isDark ? (
-          <FaSun className="text-yellow-500 text-xl sm:text-xl md:text-2xl transition-opacity duration-300" />
-        ) : (
-          <FaMoon className="text-gray-900 dark:text-gray-200 text-xl sm:text-2xl md:text-3xl transition-opacity duration-300" />
-        )}
+        {/* Circle that moves vertically */}
+        <div
+          className={`w-6 h-6  rounded-full shadow-md transform transition-all duration-300 ease-in-out ${
+            isDark ? "translate-y-4" : "translate-y-0"
+          }`}
+        >
+          {/* Icon: Sun or Moon */}
+          {isDark ? (
+            <FaSun className="text-yellow-500 text-xl absolute top-1/2 transform -translate-y-1/2 transition-opacity duration-300" />
+          ) : (
+            <FaMoon className="text-gray-900 dark:text-gray-200 text-xl absolute top-1/2 transform -translate-y-1/2 transition-opacity duration-300" />
+          )}
+        </div>
       </div>
     </div>
   );

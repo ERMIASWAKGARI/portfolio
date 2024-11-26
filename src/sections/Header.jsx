@@ -162,7 +162,7 @@ const Header = () => {
           {/* Toggle Button */}
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
-            className={`bg-primary hover:bg-primary-hover text-neutral-white px-2 py-4 rounded-full shadow-lg transition-transform duration-300 ${
+            className={`bg-indigo-500 hover:bg-indigo-600 text-neutral-white px-2.5 py-5 rounded-full shadow-lg hover:scale-105 transition-all duration-300 ease-in-out ${
               isCollapsed ? "ml-auto" : "ml-0"
             }`}
           >

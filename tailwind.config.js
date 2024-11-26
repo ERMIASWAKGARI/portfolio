@@ -40,6 +40,15 @@ export default {
         "hover:text-teal-500",
         // Add more hover color classes here as needed
       ],
+      animation: {
+        "border-spin": "spin-border 4s linear infinite",
+      },
+      keyframes: {
+        "spin-border": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+      },
     },
   },
   plugins: [],
