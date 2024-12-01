@@ -35,19 +35,18 @@ function ScrollIndicator() {
         className="text-primary dark:text-secondary-light text-2xl animate-bounce flex flex-col items-center"
         aria-label="Scroll to next section"
       >
-        <span>Scroll Down</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          strokeWidth="2"
+          strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 mt-1"
+          className="size-6"
         >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
-            d="M19 9l-7 7-7-7"
+            d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"
           />
         </svg>
       </button>
