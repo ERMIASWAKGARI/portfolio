@@ -1,170 +1,72 @@
-import {
-  FaReact,
-  FaJs,
-  FaCss3Alt,
-  FaBootstrap,
-  FaNode,
-  FaHtml5,
-  FaFilePdf,
-  FaPhp,
-  FaServer,
-} from "react-icons/fa";
-import {
-  SiTailwindcss,
-  SiTypescript,
-  SiMongodb,
-  SiMysql,
-} from "react-icons/si";
+// src/pages/About.js
+import { FaFilePdf } from "react-icons/fa";
 import { motion } from "framer-motion";
-import SocialMediaIcons from "../components/SocialMediaIcons";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-8 bg-white dark:bg-gray-900">
+    <section
+      id="about"
+      className="py-12 sm:py-16 md:py-20 px-6 sm:px-8 lg:px-20 bg-white dark:bg-gray-900"
+    >
       {/* Title Section */}
-      <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-10">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-8 sm:mb-10">
         About Me
       </h2>
-      <div className="flex flex-col lg:flex-row items-center gap-10 mx-auto max-w-[1000px]">
-        {/* Profile Image with Animated Gradient Border */}
-        <div className="flex justify-center lg:w-1/3 mb-10 lg:mb-0">
-          <div className="relative w-40 h-40 border-[4px] border-transparent rounded-full bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 shadow-lg hover:shadow-2xl transition-all">
+
+      {/* Main Content */}
+      <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 mx-auto max-w-screen-lg">
+        {/* Profile Section */}
+        <div className="flex flex-col items-center lg:w-1/3">
+          {/* Profile Image */}
+          <div className="relative w-32 h-32 sm:w-40 sm:h-40 border-[4px] border-transparent rounded-full bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 shadow-lg hover:shadow-2xl transition-all mb-5">
             <img
               src="DSC_3312.jpg" // Replace with your image URL
-              alt="Your Name"
+              alt="Ermias Wakgari"
               className="w-full h-full rounded-full object-cover transition-all duration-300 transform hover:scale-105"
             />
           </div>
+
+          {/* Name and Tagline */}
+          <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 dark:text-gray-200">
+            Ermias Wakgari
+          </h3>
+          <p className="text-sm sm:text-lg text-gray-600 dark:text-gray-400 text-center mt-2">
+            &quot;Building the Future, One Line of Code at a Time&quot;
+          </p>
         </div>
 
-        {/* Bio Text */}
-        <div className="text-center lg:text-left">
-          <p className="text-gray-600 dark:text-gray-200 text-lg mb-4">
-            Hi, I&apos;m <strong>Ermias Wakgari</strong>, a passionate web
-            developer with a focus on creating interactive, responsive, and
-            scalable websites. My core technologies include{" "}
+        {/* Bio Section */}
+        <div className="lg:w-2/3 text-center lg:text-left">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4">
+            Hi, I’m <strong>Ermias Wakgari</strong>, a passionate web developer
+            based in Ethiopia. I specialize in creating interactive, responsive,
+            and scalable websites. My focus is on technologies like{" "}
             <span className="text-primary">React</span>,{" "}
             <span className="text-primary">JavaScript</span>, and{" "}
             <span className="text-primary">Tailwind CSS</span>.
           </p>
-          {/* Social Media Icons */}
-          <div className="flex justify-center lg:justify-start gap-4 mt-4">
-            <SocialMediaIcons />
-          </div>
-        </div>
-      </div>
-
-      <div className="space-y-12 mt-12">
-        {/* Introduction */}
-        <div className="text-center flex items-center justify-center mb-8">
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-[800px]">
-            Over the years, I’ve honed my skills across a variety of
-            technologies:
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4">
+            I’m always eager to collaborate and learn from peers. My journey so
+            far has been enriched by valuable peer reviews and hands-on
+            experience, and I’m excited to keep growing in this ever-evolving
+            field.
           </p>
-        </div>
-
-        {/* Front-End Techs */}
-        <div className="text-center">
-          <h3 className="text-3xl font-semibold text-gray-800 dark:text-white mb-6">
-            Front-End Technologies
-          </h3>
-          <div className="flex flex-wrap justify-center gap-10">
-            <div className="flex flex-col items-center">
-              <FaReact className="text-5xl text-teal-500" />
-              <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
-                React
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiTypescript className="text-5xl text-blue-500" />
-              <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
-                TypeScript
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <FaJs className="text-5xl text-yellow-500" />
-              <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
-                JavaScript
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <FaCss3Alt className="text-5xl text-blue-600" />
-              <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
-                CSS
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiTailwindcss className="text-5xl text-teal-400" />
-              <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
-                Tailwind CSS
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <FaBootstrap className="text-5xl text-purple-600" />
-              <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
-                Bootstrap
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <FaHtml5 className="text-5xl text-orange-500" />
-              <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
-                HTML
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Back-End Techs */}
-        <div className="text-center">
-          <h3 className="text-3xl font-semibold text-gray-800 dark:text-white mb-6">
-            Back-End Technologies
-          </h3>
-          <div className="flex flex-wrap justify-center gap-10">
-            <div className="flex flex-col items-center">
-              <FaNode className="text-5xl text-green-500" />
-              <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
-                Node.js
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiMongodb className="text-5xl text-green-400" />
-              <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
-                MongoDB
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <SiMysql className="text-5xl text-blue-600" />
-              <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
-                MySQL
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <FaPhp className="text-5xl text-indigo-500" />
-              <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
-                PHP
-              </p>
-            </div>
-            <div className="flex flex-col items-center">
-              <FaServer className="text-5xl text-gray-500" />
-              <p className="mt-2 text-lg font-medium text-gray-800 dark:text-gray-200">
-                Express.js
-              </p>
-            </div>
+          <div className="mt-10">
+            <motion.a
+              href="Resume.pdf" // Replace with your CV link
+              download
+              className="inline-flex items-center justify-center bg-primary text-white py-2 px-4 rounded-md shadow-lg hover:bg-primary-dark hover:scale-105 transition-all duration-300"
+              aria-label="Download CV"
+            >
+              <FaFilePdf className="mr-3" /> Download My CV
+            </motion.a>
           </div>
         </div>
       </div>
 
-      {/* CV Download Button */}
-      <div className="text-center mt-12">
-        <motion.a
-          href="Resume.pdf" // Replace with your CV link
-          download
-          className="inline-flex items-center justify-center bg-primary text-white py-3 px-6 rounded-md shadow-lg hover:bg-primary-dark hover:scale-105 transition-all duration-300"
-          aria-label="Download CV"
-        >
-          <FaFilePdf className="mr-3" /> Download My CV
-        </motion.a>
-      </div>
+      {/* Skills Section */}
+
+      {/* CV Download */}
     </section>
   );
 }
