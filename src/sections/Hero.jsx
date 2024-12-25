@@ -4,14 +4,14 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const Hero = () => {
   return (
-    <section className="relative bg-tertiary dark:bg-tertiary-dark px-6 md:px-12 lg:px-20 py-12 lg:py-10">
+    <section className="relative bg-tertiary dark:bg-tertiary-dark px-4 sm:px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-8">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          className="w-32 h-32 md:w-40 md:h-40 text-primary hover:text-primary-dark absolute top-6 md:top-10 right-6 md:right-10 transform -rotate-12"
+          className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 text-primary absolute top-4 sm:top-6 right-4 sm:right-6 transform -rotate-12"
         >
           <path
             fill="currentColor"
@@ -33,16 +33,16 @@ const Hero = () => {
         }}
       />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center">
         {/* Left Section: Text Content */}
         <div className="text-center lg:text-left">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-secondary dark:text-secondary-light tracking-wide leading-tight">
+          <h1 className="sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-secondary dark:text-secondary-light tracking-wide leading-snug">
             Hello, I&apos;m{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-hover">
               Ermias Wakgari
             </span>
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-secondary dark:text-accent mt-4 leading-relaxed">
+          <p className=" sm:text-sm md:text-md lg:text-md text-secondary dark:text-accent mt-4 leading-relaxed">
             I&apos;m a{" "}
             <span className="text-primary dark:text-primary">
               <Typewriter
@@ -60,23 +60,26 @@ const Hero = () => {
               />
             </span>
           </p>
-          <p className="text-base sm:text-lg lg:text-xl text-secondary dark:text-secondary-light mt-4 leading-relaxed">
-            I design and build responsive, user-friendly websites and delivering
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-secondary dark:text-secondary-light mt-4 leading-relaxed">
+            I design and build responsive, user-friendly websites and deliver
             intuitive digital experiences.
           </p>
 
-          <div className="mt-6 flex flex-col sm:flex-row sm:space-y-0 sm:space-x-4 space-y-4">
+          <div className="mt-6 flex items-center justify-center space-x-4 sm:space-x-6 lg:space-x-8 lg:items-start lg:justify-start">
+            {/* View My Work Button */}
             <button
               aria-label="View my portfolio"
-              className="flex items-center justify-center bg-primary text-neutral-white py-2 px-4 sm:px-6 rounded hover:bg-primary-hover hover:scale-105 transition duration-300 shadow-lg"
+              className="flex items-center justify-center bg-primary text-neutral-white py-2 px-3 sm:py-2 sm:px-4 lg:py-2 lg:px-4 rounded hover:bg-primary-hover hover:scale-105 transition duration-300 shadow-lg"
             >
               <a href="#projects" className="flex items-center">
-                <span>View My Work</span>
+                <span className="text-xs sm:text-sm lg:text-base">
+                  View My Work
+                </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  className="w-5 h-5 ml-2"
+                  className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 ml-2"
                 >
                   <path
                     stroke="currentColor"
@@ -87,12 +90,15 @@ const Hero = () => {
               </a>
             </button>
 
+            {/* About Me Button */}
             <button
               aria-label="Learn more about me"
-              className="border border-primary text-primary py-2 px-4 sm:px-6 rounded hover:bg-primary hover:text-neutral-white hover:scale-105 transition duration-300 shadow-lg"
+              className="flex items-center justify-center border border-primary text-primary py-2 px-3 sm:py-2 sm:px-4 lg:py-2 lg:px-4  rounded hover:bg-primary hover:text-neutral-white hover:scale-105 transition duration-300 shadow-lg"
             >
-              <a href="#about" className="flex items-center justify-center">
-                About Me
+              <a href="#about" className="flex items-center">
+                <span className="text-xs sm:text-sm lg:text-base">
+                  About Me
+                </span>
               </a>
             </button>
           </div>
@@ -100,13 +106,19 @@ const Hero = () => {
           <SocialMediaIcons justify="start" />
         </div>
 
-        {/* Right Section: Image */}
-        <div className="flex justify-center">
+        {/* Right Section: Enhanced Illustration */}
+        <div className="relative flex justify-center items-start gradient-glow">
           <img
-            src="/Developer activity-bro.svg"
+            src="/developeractivity.svg"
             alt="Developer Illustration"
-            className="w-full max-w-xs sm:max-w-sm lg:max-w-lg animate-float"
+            className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-full max-w-xs sm:max-w-sm lg:max-w-lg animate-refined-float mb-5"
           />
+          {/* Caption */}
+          <div className="absolute bottom-0 text-center bg-primary bg-opacity-80 text-neutral-white py-2 px-4 rounded-md shadow-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+            <p className="text-sm sm:text-sm md:text-base lg:text-lg font-medium truncate">
+              &quot;Building the Future, One Line of Code at a Time&quot;
+            </p>
+          </div>
         </div>
       </div>
     </section>

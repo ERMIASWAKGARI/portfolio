@@ -71,3 +71,31 @@ bg-white -> #FFFFFF (White)
 
 
 */
+/* Gradient Glow Effect */
+.gradient-glow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(56, 178, 172, 0.3), transparent);
+  filter: blur(100px);
+  z-index: -1;
+}
+
+/* Refined Floating Animation */
+@keyframes refined-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-refined-float {
+  animation: refined-float 4s ease-in-out infinite;
+}
