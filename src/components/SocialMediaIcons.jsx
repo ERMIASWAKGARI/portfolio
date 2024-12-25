@@ -1,6 +1,7 @@
-const SocialMediaIcons = () => {
+/* eslint-disable react/prop-types */
+const SocialMediaIcons = ({ justify = "center" }) => {
   return (
-    <div className="mt-6 flex justify-center lg:justify-start space-x-4">
+    <div className={`mt-6 flex justify-center lg:justify-${justify} space-x-4`}>
       {[
         {
           href: "https://github.com",
