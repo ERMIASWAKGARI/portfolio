@@ -42,7 +42,7 @@ const Hero = () => {
               Ermias Wakgari
             </span>
           </h1>
-          <p className=" sm:text-sm md:text-md lg:text-md text-secondary dark:text-accent mt-4 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4 mt-4 leading-relaxed">
             I&apos;m a{" "}
             <span className="text-primary dark:text-primary">
               <Typewriter
@@ -60,7 +60,7 @@ const Hero = () => {
               />
             </span>
           </p>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-secondary dark:text-secondary-light mt-4 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4 mt-4 leading-relaxed">
             I design and build responsive, user-friendly websites and deliver
             intuitive digital experiences.
           </p>
