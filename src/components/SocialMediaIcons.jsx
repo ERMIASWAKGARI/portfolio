@@ -40,7 +40,10 @@ const SocialMediaIcons = ({ justify = "center" }) => {
           className="text-secondary-dark dark:text-secondary-light dark:hover:text-primary hover:text-primary"
           aria-label={label}
         >
-          <i className={`${icon} fa-2x`}></i>
+          {/* Responsive icon sizes */}
+          <i
+            className={`${icon} text-lg sm:text-xl md:text-2xl lg:text-3xl`}
+          ></i>
         </a>
       ))}
     </div>
