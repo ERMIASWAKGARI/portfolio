@@ -97,7 +97,7 @@ const Hero = () => {
             </button>
           </div>
 
-          <SocialMediaIcons />
+          <SocialMediaIcons justify="start" />
         </div>
 
         {/* Right Section: Image */}
