@@ -22,7 +22,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 px-8 bg-white dark:bg-gray-900">
       {/* Title Section */}
-      <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-10">
+      <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-10">
         About Me
       </h2>
       <div className="flex flex-col lg:flex-row items-center gap-10 mx-auto max-w-[1000px]">
