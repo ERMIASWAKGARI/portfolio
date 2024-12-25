@@ -175,14 +175,13 @@ export function GalleryWithTab() {
     },
     ...categories,
   ];
-
   return (
-    <Tabs value="all" className="px-20 py-10 rounded-lg shadow-sm">
+    <Tabs value="all" className="px-4 py-6 sm:px-8 sm:py-10 lg:px-20">
       {/* Tabs Header */}
       <TabsHeader
         className="bg-gray-100 dark:bg-gray-700 text-indigo-500 hover:text-indigo-700 dark:text-gray-100 rounded-lg"
         indicatorProps={{
-          className: "bg-primary dark:bg-primary", // Keeps the background color for active tab
+          className: "bg-primary dark:bg-primary",
         }}
       >
         {data.map(({ label, value }) => (
@@ -192,8 +191,8 @@ export function GalleryWithTab() {
             className={({ selected }) =>
               `text-sm font-medium ${
                 selected
-                  ? "text-white dark:text-gray-900" // Active tab text color
-                  : "text-gray-800 dark:text-gray-100 hover:text-indigo-500 dark:hover:text-indigo-400" // Non-active tab text color
+                  ? "text-white dark:text-gray-900"
+                  : "text-gray-800 dark:text-gray-100 hover:text-indigo-500 dark:hover:text-indigo-400"
               }`
             }
           >
@@ -208,7 +207,7 @@ export function GalleryWithTab() {
           <TabPanel
             key={value}
             value={value}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 "
           >
             {images.map(({ imageLink }, index) => (
               <div
@@ -216,7 +215,7 @@ export function GalleryWithTab() {
                 className="relative overflow-hidden rounded-lg shadow-lg bg-gray-200 dark:bg-gray-700 group"
               >
                 <img
-                  className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="h-40 sm:h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   src={imageLink}
                   alt={`Tab image ${index + 1}`}
                 />
@@ -226,7 +225,7 @@ export function GalleryWithTab() {
                   href={githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute bottom-2 left-2 px-6 py-2 bg-primary text-neutral-white rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform group-hover:translate-y-0 translate-y-4 hover:scale-105"
+                  className="absolute bottom-2 left-2 px-4 py-2 bg-primary text-neutral-white text-sm sm:text-base rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform group-hover:translate-y-0 translate-y-4 hover:scale-105"
                 >
                   View on GitHub
                 </a>
