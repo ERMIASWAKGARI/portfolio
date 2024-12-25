@@ -55,12 +55,12 @@ export default function Contact() {
       id="contact"
       className="py-20 px-20 bg-tertiary dark:bg-tertiary-dark"
     >
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-20">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl  font-bold text-center text-gray-800 dark:text-neutral-white mb-8 lg:mb-16">
         Contact Me
       </h2>
       <div className="container mx-auto max-w-6xl flex flex-wrap justify-between items-center">
         {/* Contact Form Section */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center mt-12 lg:mt-0">
+        <div className="w-full lg:w-1/2 flex items-center justify-center mt-4 lg:mt-0">
           {/* <p className="text-xl mb-8 text-gray-700 dark:text-gray-300">
             Have a question or want to collaborate? Feel free to reach out:)
           </p> */}
@@ -120,7 +120,7 @@ export default function Contact() {
               Get in Touch
             </h3>
             <div className="text-lg mb-4">
-              <p className="text-xl mb-8 text-gray-700 dark:text-gray-300 flex gap-2 items-center justify-center">
+              <p className="text-lg sm:text-sm md:text-md lg:text-lg mb-8 text-gray-700 dark:text-gray-300 flex gap-2 items-center justify-center">
                 <strong>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ export default function Contact() {
                   ermiaswakgarisse5@gmail.com
                 </a>
               </p>
-              <p className="text-xl mb-8 text-gray-700 flex gap-2 justify-center  items-center dark:text-gray-300">
+              <p className="text-lg sm:text-sm md:text-md lg:text-lg mb-8 text-gray-700 flex gap-2 justify-center  items-center dark:text-gray-300">
                 <strong>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +160,7 @@ export default function Contact() {
                 </strong>{" "}
                 +251 937 920 510
               </p>
-              <p className="text-xl mb-8 text-gray-700 flex gap-2 justify-center  items-center dark:text-gray-300">
+              <p className="text-lg sm:text-sm md:text-md lg:text-lg mb-8 text-gray-700 flex gap-2 justify-center  items-center dark:text-gray-300">
                 <strong>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
