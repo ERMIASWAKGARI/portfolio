@@ -51,24 +51,24 @@ const Header = () => {
             className="text-primary dark:text-primary focus:outline-none text-2xl p-2"
             onClick={toggleMenu}
           >
-            {isOpen ? "✖" : "☰"}
+            {isOpen ? "" : "☰"}
           </button>
         </div>
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-6 items-center">
-          {["home", "about", "services", "projects", "contact"].map((link) => (
+          {["Home", "About", "Services", "Projects", "Contact"].map((link) => (
             <a
               key={link}
-              href={`#${link}`}
-              className="text-base text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary transition duration-300 uppercase nav-link "
+              href={`#${link.toLowerCase()}`}
+              className="text-base text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary transition duration-300 nav-link "
             >
               {link}
             </a>
           ))}
           <button
             aria-label="View my portfolio"
-            className="flex items-center justify-center bg-primary text-neutral-white py-2 px-4 sm:px-6 rounded hover:bg-primary-hover hover:scale-105 transition duration-300 shadow-lg nav-link"
+            className="flex items-center justify-center bg-primary text-neutral-white py-2 px-3 rounded hover:bg-primary-hover hover:scale-105 transition duration-300 shadow-lg nav-link"
           >
             <a href="#projects" className="flex items-center">
               <span>View My Work</span>
@@ -89,42 +89,54 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-tertiary dark:bg-tertiary-dark transition-transform duration-300 ease-in-out">
-          <div className="flex flex-col items-center space-y-4 py-4">
-            {["home", "about", "services", "projects", "contact"].map(
-              (link) => (
-                <a
-                  key={link}
-                  href={`#${link}`}
-                  className="text-base text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary transition duration-300 uppercase"
-                  onClick={toggleMenu}
-                >
-                  {link}
-                </a>
-              )
-            )}
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end items-start">
+          <div className="bg-neutral-white dark:bg-tertiary-dark shadow-lg p-6 rounded-md transition-transform duration-300 ease-in-out mt-16 mr-4">
+            {/* Close Button */}
             <button
-              aria-label="View my portfolio"
-              className="flex items-center justify-center bg-primary text-neutral-white py-2 px-4 sm:px-6 rounded hover:bg-primary-hover hover:scale-105 transition duration-300 shadow-lg"
+              className="text-primary dark:text-primary absolute top-4 right-4 text-2xl"
+              onClick={toggleMenu}
             >
-              <a href="#projects" className="flex items-center">
-                <span>View My Work</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  className="w-5 h-5 ml-2"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    d="M5 12h14m0 0l-6-6m6 6l-6 6"
-                  ></path>
-                </svg>
-              </a>
+              ✖
             </button>
+
+            {/* Menu Links */}
+            <div className="flex flex-col items-start space-y-4">
+              {["Home", "About", "Services", "Projects", "Contact"].map(
+                (link) => (
+                  <a
+                    key={link}
+                    href={`${link.toLowerCase()}`}
+                    className="text-lg text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary transition duration-300"
+                    onClick={toggleMenu}
+                  >
+                    {link}
+                  </a>
+                )
+              )}
+              {/* View My Work Button */}
+              <button
+                aria-label="View my portfolio"
+                className="flex items-center justify-center bg-primary text-neutral-white py-2 px-6 rounded hover:bg-primary-hover hover:scale-105 transition duration-300 shadow-lg"
+                onClick={toggleMenu}
+              >
+                <a href="#projects" className="flex items-center">
+                  <span>View My Work</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    className="w-5 h-5 ml-2"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      d="M5 12h14m0 0l-6-6m6 6l-6 6"
+                    ></path>
+                  </svg>
+                </a>
+              </button>
+            </div>
           </div>
         </div>
       )}
@@ -143,15 +155,15 @@ const Header = () => {
             } transition-all duration-500 ease-in-out`} // Animation for width, opacity
           >
             {[
-              { icon: <FaHome size={26} />, link: "#home" },
-              { icon: <FaUser size={26} />, link: "#about" },
-              { icon: <FaServicestack size={26} />, link: "#services" },
-              { icon: <FaBriefcase size={26} />, link: "#projects" },
-              { icon: <FaEnvelope size={26} />, link: "#contact" },
+              { icon: <FaHome size={26} />, link: "#Home" },
+              { icon: <FaUser size={26} />, link: "#About" },
+              { icon: <FaServicestack size={26} />, link: "#Services" },
+              { icon: <FaBriefcase size={26} />, link: "#Projects" },
+              { icon: <FaEnvelope size={26} />, link: "#Contact" },
             ].map(({ icon, link }) => (
               <a
                 key={link}
-                href={link}
+                href={`${link.toLowerCase()}`}
                 className={`flex items-center text-lg text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary transition duration-300`}
               >
                 <span>{icon}</span>

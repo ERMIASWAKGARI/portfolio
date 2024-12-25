@@ -55,17 +55,15 @@ export default function Contact() {
       id="contact"
       className="py-20 px-20 bg-tertiary dark:bg-tertiary-dark"
     >
-      <div className="container mx-auto max-w-7xl flex flex-wrap justify-between items-center">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-20">
+        Contact Me
+      </h2>
+      <div className="container mx-auto max-w-6xl flex flex-wrap justify-between items-center">
         {/* Contact Form Section */}
-        <div className="w-full lg:w-1/2">
-          <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-10">
-            Contact Me
-          </h2>
-          <p className="text-xl mb-8 text-gray-700 dark:text-gray-300">
-            Have a question or want to collaborate? Feel free to reach out to me
-            through this contact form, and I&apos;ll get back to you as soon as
-            possible!
-          </p>
+        <div className="w-full lg:w-1/2 flex items-center justify-center mt-12 lg:mt-0">
+          {/* <p className="text-xl mb-8 text-gray-700 dark:text-gray-300">
+            Have a question or want to collaborate? Feel free to reach out:)
+          </p> */}
           <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-6">
             <input
               type="text"
