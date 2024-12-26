@@ -1,5 +1,6 @@
 import { Typewriter } from "react-simple-typewriter";
 import Particles from "react-tsparticles";
+import { motion } from "framer-motion";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const Hero = () => {
@@ -35,14 +36,42 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center">
         {/* Left Section: Text Content */}
-        <div className="text-center lg:text-left">
-          <h1 className="sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-secondary dark:text-secondary-light tracking-wide leading-snug">
+        <motion.div
+          className="text-center lg:text-left"
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          initial={{ opacity: 0, y: 50 }}
+          viewport={{ once: false }}
+        >
+          <motion.h1
+            className="sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-secondary dark:text-secondary-light tracking-wide leading-snug"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, ease: "easeOut" },
+            }}
+            initial={{ opacity: 0, y: 30 }}
+            viewport={{ once: false }}
+          >
             Hello, I&apos;m{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-hover">
               Ermias Wakgari
             </span>
-          </h1>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4 mt-4 leading-relaxed">
+          </motion.h1>
+
+          <motion.p
+            className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4 mt-4 leading-relaxed"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, ease: "easeOut", delay: 0.2 },
+            }}
+            initial={{ opacity: 0, y: 30 }}
+            viewport={{ once: false }}
+          >
             I&apos;m a{" "}
             <span className="text-primary dark:text-primary">
               <Typewriter
@@ -59,13 +88,32 @@ const Hero = () => {
                 delaySpeed={1000}
               />
             </span>
-          </p>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4 mt-4 leading-relaxed">
+          </motion.p>
+
+          <motion.p
+            className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4 mt-4 leading-relaxed"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, ease: "easeOut", delay: 0.4 },
+            }}
+            initial={{ opacity: 0, y: 30 }}
+            viewport={{ once: false }}
+          >
             I design and build responsive, user-friendly websites and deliver
             intuitive digital experiences.
-          </p>
+          </motion.p>
 
-          <div className="mt-6 flex items-center justify-center space-x-4 sm:space-x-6 lg:space-x-8 lg:items-start lg:justify-start">
+          <motion.div
+            className="mt-6 flex items-center justify-center space-x-4 sm:space-x-6 lg:space-x-8 lg:items-start lg:justify-start"
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 1, ease: "easeOut", delay: 0.6 },
+            }}
+            initial={{ opacity: 0, y: 50 }}
+            viewport={{ once: false }}
+          >
             {/* View My Work Button */}
             <button
               aria-label="View my portfolio"
@@ -101,13 +149,22 @@ const Hero = () => {
                 </span>
               </a>
             </button>
-          </div>
+          </motion.div>
 
           <SocialMediaIcons justify="start" />
-        </div>
+        </motion.div>
 
         {/* Right Section: Enhanced Illustration */}
-        <div className="relative flex justify-center items-start gradient-glow">
+        <motion.div
+          className="relative flex justify-center items-start gradient-glow"
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, ease: "easeOut", delay: 0.8 },
+          }}
+          initial={{ opacity: 0, y: 50 }}
+          viewport={{ once: false }}
+        >
           <img
             src="/developeractivity.svg"
             alt="Developer Illustration"
@@ -119,7 +176,7 @@ const Hero = () => {
               &quot;Building the Future, One Line of Code at a Time&quot;
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
