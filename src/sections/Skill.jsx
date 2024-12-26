@@ -15,7 +15,7 @@ import {
   SiMongodb,
   SiMysql,
 } from "react-icons/si";
-import TechCard from "../components/TechCard"; // Import the new component
+import TechCard from "../components/TechCard";
 
 const Skill = () => {
   const frontEndTechs = [
@@ -115,66 +115,69 @@ const Skill = () => {
   };
 
   return (
-    <motion.section
+    <section
       id="skills"
       className="py-20 px-8 sm:px-10 lg:px-20 bg-tertiary dark:bg-tertiary-dark"
-      whileInView={{ opacity: 1, y: 0 }}
-      initial={{ opacity: 0, y: 20 }} // Initial state: hidden and moved down
-      transition={{ duration: 0.6 }} // Duration of the animation
-      viewport={{ once: false }} // Trigger animation every time it comes into view
     >
-      {/* Title Section */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-10 sm:mb-16">
-        Skills
-      </h2>
-      <div className="mt-8 flex flex-col lg:flex-row lg:space-x-12 space-y-12 lg:space-y-0">
-        {/* Front-End Technologies */}
-        <motion.div
-          className="lg:w-1/2"
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 20 }} // Initial state: hidden and moved down
-          transition={{ delay: 0.2, duration: 0.5 }} // Animate front-end section
-          viewport={{ once: false }} // Trigger animation every time it comes into view
-        >
-          <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 dark:text-white mb-10 text-center">
-            Front-End Technologies
-          </h3>
-          <div className="flex justify-center gap-8 flex-wrap">
-            {frontEndTechs.map((tech, index) => (
-              <TechCard
-                key={index}
-                tech={tech}
-                index={index}
-                getProgressCircleColor={getProgressCircleColor}
-              />
-            ))}
-          </div>
-        </motion.div>
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: false }}
+      >
+        {/* Title Section */}
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-10 sm:mb-16">
+          Skills
+        </h2>
+        <div className="mt-8 flex flex-col lg:flex-row lg:space-x-12 space-y-12 lg:space-y-0">
+          {/* Front-End Technologies */}
+          <motion.div
+            className="lg:w-1/2"
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            viewport={{ once: false }}
+          >
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 dark:text-white mb-10 text-center">
+              Front-End Technologies
+            </h3>
+            <div className="flex justify-center gap-8 flex-wrap">
+              {frontEndTechs.map((tech, index) => (
+                <TechCard
+                  key={index}
+                  tech={tech}
+                  index={index}
+                  getProgressCircleColor={getProgressCircleColor}
+                />
+              ))}
+            </div>
+          </motion.div>
 
-        {/* Back-End Technologies */}
-        <motion.div
-          className="lg:w-1/2"
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 20 }} // Initial state: hidden and moved down
-          transition={{ delay: 0.4, duration: 0.5 }} // Animate back-end section
-          viewport={{ once: false }} // Trigger animation every time it comes into view
-        >
-          <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 dark:text-white mb-10 text-center">
-            Back-End Technologies
-          </h3>
-          <div className="flex justify-center gap-8 flex-wrap">
-            {backEndTechs.map((tech, index) => (
-              <TechCard
-                key={index}
-                tech={tech}
-                index={index}
-                getProgressCircleColor={getProgressCircleColor}
-              />
-            ))}
-          </div>
-        </motion.div>
-      </div>
-    </motion.section>
+          {/* Back-End Technologies */}
+          <motion.div
+            className="lg:w-1/2"
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            viewport={{ once: false }}
+          >
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 dark:text-white mb-10 text-center">
+              Back-End Technologies
+            </h3>
+            <div className="flex justify-center gap-8 flex-wrap">
+              {backEndTechs.map((tech, index) => (
+                <TechCard
+                  key={index}
+                  tech={tech}
+                  index={index}
+                  getProgressCircleColor={getProgressCircleColor}
+                />
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </motion.div>
+    </section>
   );
 };
 
