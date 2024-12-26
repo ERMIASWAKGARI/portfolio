@@ -43,7 +43,7 @@ const TechCard = ({ tech, index, getProgressCircleColor }) => {
           </svg>
           <div className="z-10">{tech.icon}</div>
         </div>
-        <p className="mt-2 text-sm md:text-base lg:text-lg font-medium text-gray-800 dark:text-gray-200 text-center">
+        <p className="mt-2 text-sm sm:text-base md:text-lg font-medium text-gray-800 dark:text-gray-200 text-center">
           {tech.name}
         </p>
       </div>
