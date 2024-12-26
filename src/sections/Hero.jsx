@@ -151,7 +151,7 @@ const Hero = () => {
             </button>
           </motion.div>
 
-          <SocialMediaIcons justify="start" />
+          <SocialMediaIcons justify="start" size={3} />
         </motion.div>
 
         {/* Right Section: Enhanced Illustration */}
