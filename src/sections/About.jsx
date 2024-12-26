@@ -26,6 +26,7 @@ export default function About() {
     }
 
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       if (ref.current) {
         observer.disconnect();
       }
@@ -36,7 +37,7 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="py-12 sm:py-16 md:py-20 px-6 sm:px-8 lg:px-20 bg-white dark:bg-gray-900"
+      className="py-12 sm:py-16 md:py-20 px-6 sm:px-8 lg:px-20 bg-tertiary-light dark:bg-gray-900"
     >
       {/* Title Section */}
       <motion.h2
@@ -84,7 +85,7 @@ export default function About() {
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         >
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 mb-4">
             Hi, I’m <strong>Ermias Wakgari</strong>, a passionate web developer
             based in Ethiopia. I specialize in creating interactive, responsive,
             and scalable websites. My focus is on technologies like{" "}
@@ -98,7 +99,7 @@ export default function About() {
             experience, and I’m excited to keep growing in this ever-evolving
             field.
           </p>
-          <div className="mt-10">
+          <div className="mt-10 flex  items-center  gap-4 justify-start flex-col md:flex-row md:justify-center sm:justify-center">
             <motion.a
               href="Resume.pdf" // Replace with your CV link
               download
@@ -110,6 +111,25 @@ export default function About() {
             >
               <FaFilePdf className="mr-3" /> Download My CV
             </motion.a>
+
+            <div className="flex justify-center space-x-6  sm:space-x-10">
+              <div className="text-center flex items-center gap-3 lg:gap-4 md:gap:2">
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white">
+                  3+
+                </h4>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                  Years Experience
+                </p>
+              </div>
+              <div className="text-center flex items-center gap-3 lg:gap-4 md:gap:2">
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white">
+                  20+
+                </h4>
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                  Projects Completed
+                </p>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>
