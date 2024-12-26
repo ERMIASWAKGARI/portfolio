@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const SocialMediaIcons = ({ justify = "center" }) => {
+const SocialMediaIcons = ({ justify, size }) => {
   return (
     <div className={`mt-6 flex justify-center lg:justify-${justify} space-x-4`}>
       {[
@@ -42,7 +42,7 @@ const SocialMediaIcons = ({ justify = "center" }) => {
         >
           {/* Responsive icon sizes */}
           <i
-            className={`${icon} text-lg sm:text-xl md:text-2xl lg:text-3xl`}
+            className={`${icon} text-lg sm:text-xl md:text-2xl lg:text-${size}xl`}
           ></i>
         </a>
       ))}
