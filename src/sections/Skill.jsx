@@ -1,4 +1,4 @@
-// src/components/Skill.js
+import { motion } from "framer-motion";
 import {
   FaReact,
   FaJs,
@@ -15,7 +15,7 @@ import {
   SiMongodb,
   SiMysql,
 } from "react-icons/si";
-import { motion } from "framer-motion";
+import TechCard from "../components/TechCard"; // Import the new component
 
 const Skill = () => {
   const frontEndTechs = [
@@ -115,126 +115,66 @@ const Skill = () => {
   };
 
   return (
-    <section
+    <motion.section
       id="skills"
       className="py-20 px-8 sm:px-10 lg:px-20 bg-tertiary dark:bg-tertiary-dark"
+      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 20 }} // Initial state: hidden and moved down
+      transition={{ duration: 0.6 }} // Duration of the animation
+      viewport={{ once: false }} // Trigger animation every time it comes into view
     >
       {/* Title Section */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-10 sm:mb-16">
         Skills
       </h2>
-      <div className="mt-8 flex flex-col lg:flex-row lg:space-x-12 space-y-12 lg:space-y-0 ">
+      <div className="mt-8 flex flex-col lg:flex-row lg:space-x-12 space-y-12 lg:space-y-0">
         {/* Front-End Technologies */}
-        <div className="lg:w-1/2">
+        <motion.div
+          className="lg:w-1/2"
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }} // Initial state: hidden and moved down
+          transition={{ delay: 0.2, duration: 0.5 }} // Animate front-end section
+          viewport={{ once: false }} // Trigger animation every time it comes into view
+        >
           <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 dark:text-white mb-10 text-center">
             Front-End Technologies
           </h3>
           <div className="flex justify-center gap-8 flex-wrap">
             {frontEndTechs.map((tech, index) => (
-              <motion.div
+              <TechCard
                 key={index}
-                className="flex flex-col items-center justify-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-              >
-                <div className="relative flex flex-col items-center justify-center">
-                  <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full border-4 border-gray-200 dark:border-gray-700 flex items-center justify-center relative">
-                    <svg
-                      className="absolute"
-                      width="100%"
-                      height="100%"
-                      viewBox="0 0 36 36"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        className="text-gray-200 dark:text-gray-600"
-                        stroke="currentColor"
-                        strokeWidth="1"
-                        fill="none"
-                        d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.8311"
-                        strokeDasharray="100, 100"
-                        strokeDashoffset="0"
-                      />
-                      <path
-                        className={`${getProgressCircleColor(tech.level)}`}
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        fill="none"
-                        style={{
-                          strokeDasharray: `${tech.level}, 100`,
-                          strokeDashoffset: `${100 - tech.level}`,
-                        }}
-                        d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.8311"
-                      />
-                    </svg>
-                    <div className="z-10">{tech.icon}</div>
-                  </div>
-                  <p className="mt-2 text-sm md:text-base lg:text-lg font-medium text-gray-800 dark:text-gray-200 text-center">
-                    {tech.name}
-                  </p>
-                </div>
-              </motion.div>
+                tech={tech}
+                index={index}
+                getProgressCircleColor={getProgressCircleColor}
+              />
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Back-End Technologies */}
-        <div className="lg:w-1/2">
+        <motion.div
+          className="lg:w-1/2"
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }} // Initial state: hidden and moved down
+          transition={{ delay: 0.4, duration: 0.5 }} // Animate back-end section
+          viewport={{ once: false }} // Trigger animation every time it comes into view
+        >
           <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 dark:text-white mb-10 text-center">
             Back-End Technologies
           </h3>
           <div className="flex justify-center gap-8 flex-wrap">
             {backEndTechs.map((tech, index) => (
-              <motion.div
+              <TechCard
                 key={index}
-                className="flex flex-col items-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-              >
-                <div className="relative flex flex-col items-center justify-center">
-                  <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full border-4 border-gray-200 dark:border-gray-700 flex items-center justify-center relative">
-                    <svg
-                      className="absolute"
-                      width="100%"
-                      height="100%"
-                      viewBox="0 0 36 36"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        className="text-gray-200 dark:text-gray-600"
-                        stroke="currentColor"
-                        strokeWidth="1"
-                        fill="none"
-                        d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.8311"
-                        strokeDasharray="100, 100"
-                        strokeDashoffset="0"
-                      />
-                      <path
-                        className={`${getProgressCircleColor(tech.level)}`}
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        fill="none"
-                        style={{
-                          strokeDasharray: `${tech.level}, 100`,
-                          strokeDashoffset: `${100 - tech.level}`,
-                        }}
-                        d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.8311"
-                      />
-                    </svg>
-                    <div className="z-10 text-center ">{tech.icon}</div>
-                  </div>
-                  <p className="mt-2 text-sm md:text-base lg:text-lg font-medium text-gray-800 dark:text-gray-200 text-center">
-                    {tech.name}
-                  </p>
-                </div>
-              </motion.div>
+                tech={tech}
+                index={index}
+                getProgressCircleColor={getProgressCircleColor}
+              />
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
