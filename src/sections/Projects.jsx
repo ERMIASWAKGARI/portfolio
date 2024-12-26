@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 px-8 sm:px-10 lg:px-20 bg-gray-100 dark:bg-gray-900"
+      className="py-20 px-8 sm:px-10 lg:px-20 bg-tertiary-light dark:bg-gray-900"
     >
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
