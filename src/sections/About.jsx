@@ -1,22 +1,64 @@
 // src/pages/About.js
 import { FaFilePdf } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 
 export default function About() {
+  const ref = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        } else {
+          setIsInView(false);
+        }
+      },
+      {
+        threshold: 0.2, // Adjust the threshold value based on how much of the element should be visible
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.disconnect();
+      }
+    };
+  }, []);
+
   return (
     <section
       id="about"
+      ref={ref}
       className="py-12 sm:py-16 md:py-20 px-6 sm:px-8 lg:px-20 bg-white dark:bg-gray-900"
     >
       {/* Title Section */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-8 sm:mb-10">
+      <motion.h2
+        className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-8 sm:mb-10"
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         About Me
-      </h2>
+      </motion.h2>
 
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 mx-auto max-w-screen-lg">
         {/* Profile Section */}
-        <div className="flex flex-col items-center lg:w-1/3">
+        <motion.div
+          className="flex flex-col items-center lg:w-1/3"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={
+            isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
+          }
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
           {/* Profile Image */}
           <div className="relative w-32 h-32 sm:w-40 sm:h-40 border-[4px] border-transparent rounded-full bg-gradient-to-r from-teal-400 via-teal-300 to-teal-200 shadow-lg hover:shadow-2xl transition-all mb-5">
             <img
@@ -33,10 +75,15 @@ export default function About() {
           <p className="text-sm sm:text-lg text-gray-600 dark:text-gray-400 text-center mt-2">
             &quot;Building the Future, One Line of Code at a Time&quot;
           </p>
-        </div>
+        </motion.div>
 
         {/* Bio Section */}
-        <div className="lg:w-2/3 text-center lg:text-left">
+        <motion.div
+          className="lg:w-2/3 text-center lg:text-left"
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+        >
           <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4">
             Hi, I’m <strong>Ermias Wakgari</strong>, a passionate web developer
             based in Ethiopia. I specialize in creating interactive, responsive,
@@ -57,16 +104,15 @@ export default function About() {
               download
               className="inline-flex items-center justify-center bg-primary text-white py-2 px-4 rounded-md shadow-lg hover:bg-primary-dark hover:scale-105 transition-all duration-300"
               aria-label="Download CV"
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
             >
               <FaFilePdf className="mr-3" /> Download My CV
             </motion.a>
           </div>
-        </div>
+        </motion.div>
       </div>
-
-      {/* Skills Section */}
-
-      {/* CV Download */}
     </section>
   );
 }
