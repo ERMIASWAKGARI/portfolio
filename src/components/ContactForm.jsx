@@ -49,14 +49,17 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-6">
+    <form
+      onSubmit={handleSubmit}
+      className="max-w-md mx-auto space-y-6 p-6 bg-neutral-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-300 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300"
+    >
       <input
         type="text"
         name="name"
         placeholder="Your Name"
         value={formData.name}
         onChange={handleChange}
-        className="w-full px-4 py-2 border rounded focus:outline-none"
+        className="w-full px-4 py-2  border rounded focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-tertiary dark:bg-tertiary-dark dark:text-white text-primary-dark"
         required
       />
       <input
@@ -65,7 +68,7 @@ export default function ContactForm() {
         placeholder="Your Email"
         value={formData.email}
         onChange={handleChange}
-        className="w-full px-4 py-2 border rounded focus:outline-none"
+        className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-tertiary dark:bg-tertiary-dark dark:text-white text-primary-dark"
         required
       />
       <textarea
@@ -73,14 +76,14 @@ export default function ContactForm() {
         placeholder="Your Message"
         value={formData.message}
         onChange={handleChange}
-        className="w-full px-4 py-2 border rounded focus:outline-none"
+        className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-tertiary dark:bg-tertiary-dark dark:text-white text-primary-dark"
         rows="4"
         required
       ></textarea>
 
       <button
         type="submit"
-        className="w-full px-6 py-2 bg-teal-500 text-white rounded hover:bg-teal-600"
+        className="w-full px-6 py-2 bg-teal-500 text-white rounded hover:bg-teal-600 transition-colors duration-200"
         disabled={loading}
       >
         {loading ? "Sending..." : "Send Message"}

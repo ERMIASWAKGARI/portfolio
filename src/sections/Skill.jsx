@@ -138,7 +138,7 @@ const Skill = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
             viewport={{ once: false }}
           >
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 dark:text-white mb-10 text-center">
+            <h3 className="text-xl md:text-xl lg:text-2xl font-semibold text-gray-800 dark:text-white mb-10 text-center">
               Front-End Technologies
             </h3>
             <div className="flex justify-center gap-8 flex-wrap">
@@ -161,7 +161,7 @@ const Skill = () => {
             transition={{ delay: 0.4, duration: 0.5 }}
             viewport={{ once: false }}
           >
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 dark:text-white mb-10 text-center">
+            <h3 className="text-xl md:text-xl lg:text-2xl font-semibold text-gray-800 dark:text-white mb-10 text-center">
               Back-End Technologies
             </h3>
             <div className="flex justify-center gap-8 flex-wrap">

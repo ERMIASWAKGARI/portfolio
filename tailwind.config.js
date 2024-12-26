@@ -19,8 +19,9 @@ export default {
           dark: "#2d3748", // Secondary background in dark mode
         },
         tertiary: {
-          DEFAULT: "#f7fafc", // Gray 100 - Background for light mode
+          DEFAULT: "#ebfbee", // Gray 100 - Background for light mode
           dark: "#2d3748", // Gray 800 - Background for dark mode
+          light: "#e7f5ff",
         },
         neutral: {
           white: "#ffffff", // White backgrounds and text
