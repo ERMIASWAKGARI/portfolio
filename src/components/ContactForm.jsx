@@ -59,7 +59,7 @@ export default function ContactForm() {
         placeholder="Your Name"
         value={formData.name}
         onChange={handleChange}
-        className="w-full px-4 py-2  border rounded focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-tertiary dark:bg-tertiary-dark dark:text-white text-primary-dark"
+        className="text-sm sm:text-base md:text-lg w-full px-4 py-2  border rounded focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-tertiary dark:bg-tertiary-dark dark:text-white text-primary-dark"
         required
       />
       <input
@@ -68,7 +68,7 @@ export default function ContactForm() {
         placeholder="Your Email"
         value={formData.email}
         onChange={handleChange}
-        className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-tertiary dark:bg-tertiary-dark dark:text-white text-primary-dark"
+        className="text-sm sm:text-base md:text-lg w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-tertiary dark:bg-tertiary-dark dark:text-white text-primary-dark"
         required
       />
       <textarea
@@ -76,14 +76,14 @@ export default function ContactForm() {
         placeholder="Your Message"
         value={formData.message}
         onChange={handleChange}
-        className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-tertiary dark:bg-tertiary-dark dark:text-white text-primary-dark"
+        className="text-sm sm:text-base md:text-lg w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-tertiary dark:bg-tertiary-dark dark:text-white text-primary-dark"
         rows="4"
         required
       ></textarea>
 
       <button
         type="submit"
-        className="w-full px-6 py-2 bg-teal-500 text-white rounded hover:bg-teal-600 transition-colors duration-200"
+        className="w-full px-6 py-2 text-sm sm:text-base md:text-lg bg-teal-500 text-white rounded hover:bg-teal-600 transition-colors duration-200"
         disabled={loading}
       >
         {loading ? "Sending..." : "Send Message"}
@@ -91,7 +91,7 @@ export default function ContactForm() {
 
       {status && (
         <div
-          className={`mt-6 text-center text-lg font-semibold ${
+          className={`mt-6 text-center text-sm sm:text-base md:text-lg font-semibold ${
             status.includes("success") ? "text-green-500" : "text-red-500"
           }`}
         >
