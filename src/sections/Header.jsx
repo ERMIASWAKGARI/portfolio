@@ -53,9 +53,9 @@ const Header = () => {
         <div className="flex items-center space-x-2">
           <div className="p-1 bg-primary rounded-full nav-link">
             <img
-              src="../../public/E.png"
+              src="logo 1.png"
               alt="Logo"
-              className="h-10 w-10 rounded-full"
+              className="h-10 w-10 rounded-full bg-white p-1"
             />
           </div>
         </div>
