@@ -101,7 +101,7 @@ export function GalleryWithTab() {
     <Tabs value="all" className="px-4 py-6 sm:px-8 sm:py-10 lg:px-20">
       {/* Tabs Header */}
       <TabsHeader
-        className="bg-gray-100 dark:bg-gray-700 text-indigo-500 hover:text-indigo-700 dark:text-gray-100 rounded-lg"
+        className="bg-gray-100 dark:bg-gray-700 text-secondary-dark  dark:text-gray-100 rounded-lg"
         indicatorProps={{
           className: "bg-primary dark:bg-primary",
         }}
@@ -114,7 +114,7 @@ export function GalleryWithTab() {
               `text-sm font-medium ${
                 selected
                   ? "text-white dark:text-gray-900"
-                  : "text-gray-800 dark:text-gray-100 hover:text-indigo-500 dark:hover:text-indigo-400"
+                  : "text-gray-800 dark:text-gray-100 "
               }`
             }
           >
