@@ -8,6 +8,7 @@ import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import ScrollIndicator from "./components/ScrollIndicator";
 import ThemeToggle from "./components/ThemeToggle";
+import Services from "./components/Services";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
       <Hero />
       <About />
       <Skill />
+      <Services />
+
       <Projects />
       <Contact />
       <Footer />
