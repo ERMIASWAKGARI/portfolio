@@ -83,7 +83,7 @@ export function GalleryWithTab() {
     <Tabs value="all" className="px-4 py-6 sm:px-8 sm:py-10 lg:px-20">
       {/* Tabs Header */}
       <TabsHeader
-        className="bg-gray-100 dark:bg-gray-700 text-secondary-dark  dark:text-gray-100 rounded-lg"
+        className="bg-gray-100 dark:bg-gray-900 text-secondary-dark  dark:text-gray-100 rounded-lg"
         indicatorProps={{
           className: "bg-primary dark:bg-primary",
         }}

@@ -5,7 +5,7 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const Hero = () => {
   return (
-    <section className="relative bg-tertiary dark:bg-tertiary-dark px-4 sm:px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-8">
+    <section className="relative bg-neutral dark:bg-tertiary-dark px-4 sm:px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-8">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <svg
@@ -159,10 +159,10 @@ const Hero = () => {
           className="relative flex justify-center items-start gradient-glow"
           whileInView={{
             opacity: 1,
-            y: 0,
+            x: 0,
             transition: { duration: 1, ease: "easeOut", delay: 0.8 },
           }}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, x: 50 }}
           viewport={{ once: false }}
         >
           <img
