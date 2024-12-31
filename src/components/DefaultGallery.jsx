@@ -182,11 +182,11 @@ export function GalleryWithTab() {
 
   return (
     <>
-      <Tabs value="all" className="px-4 py-6 sm:px-8 sm:py-10 lg:px-20">
+      <Tabs value="all" className="py-6sm:py-10">
         <TabsHeader
           className="bg-gray-100 dark:bg-[#003049] text-secondary-dark dark:text-gray-100 rounded-lg"
           indicatorProps={{
-            className: "bg-primary dark:bg-primary",
+            className: "bg-teal-400 dark:bg-teal-400",
           }}
         >
           {extendedCategories.map(({ label, value }) => (
@@ -228,7 +228,7 @@ export function GalleryWithTab() {
                     src={project.images[0].imageLink}
                     alt={project.projectName}
                   />
-                  <div className="absolute bottom-0 left-0 bg-primary dark:bg-primary-dark bg-opacity-70 text-gray-800 dark:text-gray-200 p-2 text-sm">
+                  <div className="absolute bottom-0 left-0 bg-teal-400 dark:bg-teal-400 bg-opacity-70 text-gray-800 dark:text-gray-800 p-2 text-sm">
                     {project.projectName}
                   </div>
 

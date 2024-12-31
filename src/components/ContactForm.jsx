@@ -83,7 +83,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="w-full px-6 py-2 text-sm sm:text-base md:text-lg bg-teal-500 text-white rounded hover:bg-teal-600 transition-colors duration-200"
+        className="w-full px-6 py-2 text-sm sm:text-base md:text-lg bg-teal-400 text-white rounded hover:bg-teal-500 transition-colors duration-200"
         disabled={loading}
       >
         {loading ? "Sending..." : "Send Message"}
@@ -92,7 +92,7 @@ export default function ContactForm() {
       {status && (
         <div
           className={`mt-6 text-center text-sm sm:text-base md:text-lg font-semibold ${
-            status.includes("success") ? "text-green-500" : "text-red-500"
+            status.includes("success") ? "text-teal-400" : "text-red-500"
           }`}
         >
           {status}

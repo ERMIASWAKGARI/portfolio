@@ -51,7 +51,7 @@ const Header = () => {
       <nav className="max-w-8xl mx-auto px-4 py-2 flex justify-between items-center">
         {/* Brand Title */}
         <div className="flex items-center space-x-2">
-          <div className="p-1 bg-primary rounded-full nav-link">
+          <div className="p-1 bg-teal-400 rounded-full nav-link">
             <img
               src="logo 1.png"
               alt="Logo"
@@ -63,7 +63,7 @@ const Header = () => {
         {/* Hamburger Menu for Mobile */}
         <div className="md:hidden">
           <button
-            className="text-primary dark:text-primary focus:outline-none text-2xl p-2"
+            className="text-teal-400 dark:text-teal-400 focus:outline-none text-2xl p-2"
             onClick={toggleMenu}
           >
             {isOpen ? "" : "☰"}
@@ -77,7 +77,7 @@ const Header = () => {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="text-base text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary transition duration-300 nav-link "
+                className="text-base text-secondary dark:text-secondary-light hover:text-teal-400 dark:hover:text-teal-400 transition duration-300 nav-link "
               >
                 {link}
               </a>
@@ -85,10 +85,10 @@ const Header = () => {
           )}
           <button
             aria-label="View my portfolio"
-            className="flex items-center justify-center bg-primary text-neutral-white py-2 px-3 rounded hover:bg-primary-hover hover:scale-105 transition duration-300 shadow-lg nav-link"
+            className="flex items-center justify-center bg-teal-400 text-[#000] py-2 px-4 rounded-lg hover:bg-teal-500 hover:scale-105 transition duration-300 shadow-lg nav-link"
           >
             <a href="#projects" className="flex items-center">
-              <span>View My Work</span>
+              <span className="text-sm lg:text-base">View My Work</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -111,7 +111,7 @@ const Header = () => {
           <div className="bg-neutral-white dark:bg-tertiary-dark shadow-lg p-3 rounded-md transition-transform duration-300 ease-in-out mt-16 mr-4">
             {/* Close Button */}
             <button
-              className="text-primary dark:text-primary absolute top-4 right-4 text-2xl"
+              className="text-teal-400 dark:text-teal-400 absolute top-4 right-4 text-2xl"
               onClick={toggleMenu}
             >
               ✖
@@ -130,7 +130,7 @@ const Header = () => {
                 <a
                   key={link}
                   href={`#${link.toLowerCase()}`}
-                  className="text-sm sm:text-base md:text-lg text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary transition duration-300"
+                  className="text-sm sm:text-base md:text-lg text-secondary dark:text-secondary-light hover:text-teal-400 dark:hover:text-teal-400 transition duration-300"
                   onClick={toggleMenu}
                 >
                   {link}
@@ -139,7 +139,7 @@ const Header = () => {
               {/* View My Work Button */}
               <button
                 aria-label="View my portfolio"
-                className="flex items-center justify-center bg-primary text-neutral-white py-1 px-2 rounded hover:bg-primary-hover hover:scale-105 transition duration-300 shadow-lg"
+                className="flex items-center justify-center bg-teal-400 text-[#000] py-1 px-2 rounded hover:bg-teal-500 hover:scale-105 transition duration-300 shadow-lg"
                 onClick={toggleMenu}
               >
                 <a
@@ -190,7 +190,7 @@ const Header = () => {
               <a
                 key={link}
                 href={`${link.toLowerCase()}`}
-                className={`flex items-center text-lg text-secondary dark:text-secondary-light hover:text-primary dark:hover:text-primary transition duration-300`}
+                className={`flex items-center text-lg text-secondary dark:text-secondary-light hover:text-teal-400 dark:hover:text-teal-400 transition duration-300`}
               >
                 <span>{icon}</span>
               </a>
@@ -200,7 +200,7 @@ const Header = () => {
           {/* Toggle Button */}
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
-            className={`bg-primary hover:bg-primary-hover text-neutral-white px-2.5 py-5 rounded-full shadow-lg hover:scale-105 transition-all duration-300 ease-in-out ${
+            className={`bg-teal-400 hover:bg-teal-500 text-[#000] px-2.5 py-5 rounded-full shadow-lg hover:scale-105 transition-all duration-300 ease-in-out ${
               isCollapsed ? "ml-auto" : "ml-0"
             }`}
           >

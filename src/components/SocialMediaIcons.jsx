@@ -38,7 +38,7 @@ const SocialMediaIcons = ({ justify, size }) => {
           key={label}
           href={href}
           rel="noopener noreferrer"
-          className="text-secondary-dark dark:text-secondary-light dark:hover:text-primary hover:text-primary"
+          className="text-secondary-dark dark:text-secondary-light dark:hover:text-teal-400 hover:text-teal-400"
           aria-label={label}
         >
           {/* Responsive icon sizes */}

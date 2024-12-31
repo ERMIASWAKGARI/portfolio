@@ -47,7 +47,7 @@ const Skill = () => {
         <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white mb-4">
           {title}
         </h3>
-        <div className="w-16 sm:w-full h-1 bg-primary dark:bg-primary-light mb-4"></div>
+        <div className="w-16 sm:w-full h-1 bg-teal-400 dark:bg-primary-light mb-4"></div>
       </motion.div>
 
       {/* Technologies List */}

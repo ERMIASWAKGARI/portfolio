@@ -16,19 +16,20 @@ export default function ContactInfo() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6 text-primary"
+            className="size-6 text-teal-400"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0z"
+              d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
             />
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M12 2c2.3 0 4.2 1.5 5.25 3.5 1.05 2.1 1.05 4.5 0 6.5C16.2 13.5 14.2 16 12 16s-4.2-2.5-5.25-4.5c-1.05-2-1.05-4.4 0-6.5C7.8 3.5 9.7 2 12 2z"
+              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
             />
           </svg>
+
           <span className="font-semibold text-gray-800 dark:text-secondary-light">
             Location
           </span>
@@ -47,14 +48,15 @@ export default function ContactInfo() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6 text-primary"
+            className="size-6 text-teal-400"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z"
+              d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
             />
           </svg>
+
           <span className="font-semibold text-gray-800 dark:text-secondary-light">
             Phone
           </span>
@@ -76,14 +78,15 @@ export default function ContactInfo() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6 text-primary"
+            className="size-6 text-teal-400"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M21 12c0-1.38-.56-2.63-1.5-3.5L13 12.13V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-8.13l6.5 4.63C20.44 14.63 21 13.38 21 12z"
+              d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
             />
           </svg>
+
           <span className="font-semibold text-gray-800 dark:text-secondary-light">
             Email
           </span>

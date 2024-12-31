@@ -31,7 +31,7 @@ const ThemeToggle = () => {
   return (
     <div
       onClick={toggleTheme}
-      className="fixed left-1 top-1/2 transform -translate-y-1/2 z-50 flex items-center justify-center w-8 h-16 cursor-pointer rounded-full bg-primary hover:bg-primary-hover hover:scale-105 transition-all duration-300 ease-in-out shadow-lg"
+      className="fixed left-1 top-1/2 transform -translate-y-1/2 z-50 flex items-center justify-center w-8 h-16 cursor-pointer rounded-full bg-teal-400 hover:teal-600 hover:scale-105 transition-all duration-300 ease-in-out shadow-lg"
       aria-label="Toggle theme"
     >
       {/* Switch container (Vertical layout) */}
