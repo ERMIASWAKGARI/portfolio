@@ -26,10 +26,15 @@ const Hero = () => {
         id="tsparticles"
         options={{
           particles: {
-            number: { value: 50 },
-            size: { value: 3 },
-            move: { enable: true, speed: 1 },
-            line_linked: { enable: true, color: "#38b2ac" },
+            number: { value: 30 },
+            size: { value: 2 },
+            move: { enable: true, speed: 0.5 },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#38b2ac",
+              opacity: 0.5,
+            },
           },
         }}
       />
@@ -37,7 +42,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center">
         {/* Left Section: Text Content */}
         <motion.div
-          className="text-center lg:text-left"
+          className="text-center lg:text-left max-w-prose mx-auto"
           whileInView={{
             opacity: 1,
             y: 0,
@@ -57,13 +62,13 @@ const Hero = () => {
             viewport={{ once: false }}
           >
             Hello, I&apos;m{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-hover">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-teal-500">
               Ermias Wakgari
             </span>
           </motion.h1>
 
           <motion.p
-            className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4 mt-4 leading-relaxed"
+            className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-200 mb-4 mt-4 leading-relaxed"
             whileInView={{
               opacity: 1,
               y: 0,
@@ -73,7 +78,7 @@ const Hero = () => {
             viewport={{ once: false }}
           >
             I&apos;m a{" "}
-            <span className="text-primary dark:text-primary">
+            <span className="text-teal-400 dark:text-teal-400">
               <Typewriter
                 words={[
                   "Web Developer.",
@@ -91,7 +96,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.p
-            className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4 mt-4 leading-relaxed"
+            className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-200 mb-4 mt-4 leading-relaxed"
             whileInView={{
               opacity: 1,
               y: 0,
@@ -117,17 +122,15 @@ const Hero = () => {
             {/* View My Work Button */}
             <button
               aria-label="View my portfolio"
-              className="flex items-center justify-center bg-primary text-neutral-white py-2 px-3 sm:py-2 sm:px-4 lg:py-2 lg:px-4 rounded hover:bg-primary-hover hover:scale-105 transition duration-300 shadow-lg"
+              className="flex items-center justify-center bg-teal-400 text-[#000] py-2 px-4 rounded-lg hover:bg-teal-500 hover:scale-105 transition duration-300 shadow-lg"
             >
               <a href="#projects" className="flex items-center">
-                <span className="text-xs sm:text-sm lg:text-base">
-                  View My Work
-                </span>
+                <span className="text-sm lg:text-base">View My Work</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 ml-2"
+                  className="w-5 h-5 lg:w-6 lg:h-6 ml-2"
                 >
                   <path
                     stroke="currentColor"
@@ -141,12 +144,10 @@ const Hero = () => {
             {/* About Me Button */}
             <button
               aria-label="Learn more about me"
-              className="flex items-center justify-center border border-primary text-primary py-2 px-3 sm:py-2 sm:px-4 lg:py-2 lg:px-4  rounded hover:bg-primary hover:text-neutral-white hover:scale-105 transition duration-300 shadow-lg"
+              className="flex items-center justify-center border border-teal-400 text-[#000]  py-2 px-4 rounded-lg  hover:text-[#000] dark:text-[#2dd4bf]  hover:scale-105 transition duration-300 shadow-lg"
             >
               <a href="#about" className="flex items-center">
-                <span className="text-xs sm:text-sm lg:text-base">
-                  About Me
-                </span>
+                <span className="text-sm lg:text-base">About Me</span>
               </a>
             </button>
           </motion.div>
@@ -156,7 +157,7 @@ const Hero = () => {
 
         {/* Right Section: Enhanced Illustration */}
         <motion.div
-          className="relative flex justify-center items-start gradient-glow"
+          className="relative flex justify-center items-start"
           whileInView={{
             opacity: 1,
             x: 0,
@@ -168,12 +169,13 @@ const Hero = () => {
           <img
             src="/developeractivity.svg"
             alt="Developer Illustration"
+            loading="lazy"
             className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-full max-w-xs sm:max-w-sm lg:max-w-lg animate-refined-float mb-5"
           />
           {/* Caption */}
-          <div className="absolute bottom-0 text-center bg-primary bg-opacity-80 text-neutral-white py-2 px-4 rounded-md shadow-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
-            <p className="text-sm sm:text-sm md:text-base lg:text-lg font-medium truncate">
-              &quot;Building the Future, One Line of Code at a Time&quot;
+          <div className="absolute bottom-0 text-center bg-teal-400 bg-opacity-80 text-[#000]  py-2 px-4 rounded-md shadow-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+            <p className="text-sm sm:text-base lg:text-lg font-medium truncate">
+              &quot;Transforming Ideas into Scalable Solutions&quot;
             </p>
           </div>
         </motion.div>
