@@ -4,32 +4,32 @@ const SocialMediaIcons = ({ justify, size }) => {
     <div className={`mt-6 flex justify-center lg:justify-${justify} space-x-4`}>
       {[
         {
-          href: "https://github.com",
+          href: "https://github.com/ERMIASWAKGARI",
           label: "GitHub Profile",
           icon: "fab fa-github",
         },
         {
-          href: "https://linkedin.com",
+          href: "https://www.linkedin.com/in/ermias-wakgari-05a62927a/",
           label: "LinkedIn Profile",
           icon: "fab fa-linkedin",
         },
         {
-          href: "https://twitter.com",
+          href: "https://x.com/ermi414",
           label: "Twitter Profile",
           icon: "fab fa-twitter",
         },
         {
-          href: "https://dev.to",
+          href: "https://dev.to/ermiaswakgari",
           label: "Dev.to Profile",
           icon: "fab fa-dev",
         },
         {
-          href: "https://stackoverflow.com",
+          href: "https://stackoverflow.com/users/28997956/ermias-wakgari",
           label: "StackOverflow Profile",
           icon: "fab fa-stack-overflow",
         },
         {
-          href: "https://dribbble.com",
+          href: "https://dribbble.com/ermiaswakgari",
           label: "Dribbble Profile",
           icon: "fab fa-dribbble",
         },
