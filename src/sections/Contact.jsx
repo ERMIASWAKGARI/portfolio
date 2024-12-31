@@ -11,7 +11,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-20 px-20 bg-gray-50 dark:bg-[#003049]"
+      className="py-20 px-8 md:px-16 lg:px-24 bg-gray-50 dark:bg-[#003049]"
     >
       <motion.h2
         className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-8 sm:mb-10"
@@ -36,7 +36,7 @@ export default function Contact() {
           <ContactForm />
         </motion.div>
         <motion.div
-          className="w-full lg:w-1/2 flex items-center justify-center mt-12 lg:mt-0"
+          className="w-full lg:w-1/2 flex items-center justify-center  mt-4 lg:mt-0 p-5"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}

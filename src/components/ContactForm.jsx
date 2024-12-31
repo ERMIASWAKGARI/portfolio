@@ -51,7 +51,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-md mx-auto space-y-6 p-6 bg-neutral-white dark:bg-[#001d3d] rounded-2xl shadow-lg border border-gray-300 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300"
+      className="max-w-sm mx-auto space-y-6 p-6 bg-neutral-white dark:bg-[#001d3d] rounded-2xl shadow-lg border border-gray-300 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300"
     >
       <input
         type="text"
@@ -59,7 +59,7 @@ export default function ContactForm() {
         placeholder="Your Name"
         value={formData.name}
         onChange={handleChange}
-        className="text-sm sm:text-base md:text-lg w-full px-4 py-2  border rounded focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-gray-50 dark:bg-[#001d3d] dark:text-white text-primary-dark"
+        className="text-sm sm:text-base md:text-lg w-full px-4 py-2  border rounded focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-teal-400 bg-gray-50 dark:bg-[#001d3d] dark:text-white text-primary-dark"
         required
       />
       <input
@@ -68,7 +68,7 @@ export default function ContactForm() {
         placeholder="Your Email"
         value={formData.email}
         onChange={handleChange}
-        className="text-sm sm:text-base md:text-lg w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-gray-50 dark:bg-[#001d3d] dark:text-white text-primary-dark"
+        className="text-sm sm:text-base md:text-lg w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-teal-400 bg-gray-50 dark:bg-[#001d3d] dark:text-white text-primary-dark"
         required
       />
       <textarea
@@ -76,7 +76,7 @@ export default function ContactForm() {
         placeholder="Your Message"
         value={formData.message}
         onChange={handleChange}
-        className="text-sm sm:text-base md:text-lg w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-gray-50 dark:bg-[#001d3d] dark:text-white text-primary-dark"
+        className="text-sm sm:text-base md:text-lg w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-teal-400 bg-gray-50 dark:bg-[#001d3d] dark:text-white text-primary-dark"
         rows="4"
         required
       ></textarea>
