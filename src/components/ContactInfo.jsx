@@ -2,7 +2,7 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 
 export default function ContactInfo() {
   return (
-    <div className="max-w-lg mx-auto p-6 text-sm sm:text-base md:text-lg bg-neutral-white dark:bg-gray-800 rounded-2xl shadow-xl">
+    <div className="max-w-lg mx-auto p-6 text-sm sm:text-base md:text-lg bg-neutral-white dark:bg-[#001d3d] rounded-2xl shadow-xl">
       {/* <h3 className="text-3xl font-semibold text-gray-800 dark:text-neutral-white mb-8 text-center">
         Get in Touch
       </h3> */}

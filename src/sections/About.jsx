@@ -37,7 +37,7 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="py-12 sm:py-16 md:py-20 px-6 sm:px-8 lg:px-20 bg-gray-50 dark:bg-gray-900"
+      className="py-12 sm:py-16 md:py-20 px-6 sm:px-8 lg:px-20 bg-gray-50 dark:bg-[#003049]"
     >
       {/* Title Section */}
       <motion.h2

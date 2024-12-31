@@ -7,7 +7,12 @@ import {
 } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaTimes,
+  FaGithub,
+} from "react-icons/fa";
 
 export function GalleryWithTab() {
   // eslint-disable-next-line no-unused-vars
@@ -51,6 +56,7 @@ export function GalleryWithTab() {
             { imageLink: "gazettepost.jpg" },
             { imageLink: "gazetteprofile.jpg" },
           ],
+          githubLink: "https://github.com/ERMIASWAKGARI",
         },
         {
           projectName: "Fullstack Project 2",
@@ -58,10 +64,12 @@ export function GalleryWithTab() {
             { imageLink: "nodefarm1.png" },
             { imageLink: "nodefarm2.png" },
           ],
+          githubLink: "https://github.com/ERMIASWAKGARI",
         },
         {
           projectName: "Fullstack Project 2",
           images: [{ imageLink: "php1.png" }],
+          githubLink: "https://github.com/ERMIASWAKGARI",
         },
       ],
     },
@@ -75,6 +83,7 @@ export function GalleryWithTab() {
             { imageLink: "bankist.png" },
             // { imageLink: "gazettesignup.jpg" },
           ],
+          githubLink: "https://github.com/ERMIASWAKGARI",
         },
         {
           projectName: "Frontend Project 2",
@@ -86,6 +95,7 @@ export function GalleryWithTab() {
             { imageLink: "worldwise5.png" },
             { imageLink: "worldwise6.png" },
           ],
+          githubLink: "https://github.com/ERMIASWAKGARI",
         },
         {
           projectName: "Frontend Project 3",
@@ -93,6 +103,7 @@ export function GalleryWithTab() {
             { imageLink: "usepopcorn0.png" },
             { imageLink: "usepopcorn1.png" },
           ],
+          githubLink: "https://github.com/ERMIASWAKGARI",
         },
         {
           projectName: "Frontend Project 4",
@@ -100,6 +111,7 @@ export function GalleryWithTab() {
             { imageLink: "quiz.png" },
             // { imageLink: "usepopcorn1.png" },
           ],
+          githubLink: "https://github.com/ERMIASWAKGARI",
         },
         {
           projectName: "Frontend Project 5",
@@ -108,10 +120,12 @@ export function GalleryWithTab() {
             { imageLink: "foodorder2.png" },
             { imageLink: "foodorder3.png" },
           ],
+          githubLink: "https://github.com/ERMIASWAKGARI",
         },
         {
           projectName: "Frontend Project 6",
           images: [{ imageLink: "game1.png" }],
+          githubLink: "https://github.com/ERMIASWAKGARI",
         },
       ],
     },
@@ -127,21 +141,23 @@ export function GalleryWithTab() {
             { imageLink: "forkify3.png" },
             { imageLink: "forkify4.png" },
           ],
+          githubLink: "https://github.com/ERMIASWAKGARI",
         },
         {
           projectName: "Backend Project 2",
           images: [{ imageLink: "faraway.png" }],
+          githubLink: "https://github.com/ERMIASWAKGARI",
         },
         {
           projectName: "Backend Project 3",
           images: [{ imageLink: "guessmynumber.png" }],
+          githubLink: "https://github.com/ERMIASWAKGARI",
         },
       ],
     },
   ];
 
   const allProjects = categories.flatMap((category) => category.projects);
-
   const extendedCategories = [
     { label: "All", value: "all", projects: allProjects },
     ...categories,
@@ -168,7 +184,7 @@ export function GalleryWithTab() {
     <>
       <Tabs value="all" className="px-4 py-6 sm:px-8 sm:py-10 lg:px-20">
         <TabsHeader
-          className="bg-gray-100 dark:bg-gray-900 text-secondary-dark dark:text-gray-100 rounded-lg"
+          className="bg-gray-100 dark:bg-[#003049] text-secondary-dark dark:text-gray-100 rounded-lg"
           indicatorProps={{
             className: "bg-primary dark:bg-primary",
           }}
@@ -202,15 +218,30 @@ export function GalleryWithTab() {
                   key={index}
                   className="relative overflow-hidden rounded-lg shadow-lg bg-gray-200 dark:bg-gray-700 group"
                   onClick={() => openPopup(project.images, 0)}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
                 >
                   <img
                     className="w-full h-auto object-cover"
                     src={project.images[0].imageLink}
                     alt={project.projectName}
                   />
-                  <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+                  <div className="absolute bottom-0 left-0 bg-primary dark:bg-primary-dark bg-opacity-70 text-gray-800 dark:text-gray-200 p-2 text-sm">
                     {project.projectName}
                   </div>
+
+                  {/* GitHub Link */}
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute top-2 right-2 text-white bg-black bg-opacity-70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    onClick={(e) => e.stopPropagation()} // Prevent popup from opening
+                  >
+                    <FaGithub />
+                  </a>
                 </motion.div>
               ))}
             </TabPanel>

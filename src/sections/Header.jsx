@@ -46,7 +46,7 @@ const Header = () => {
   return (
     <header
       id="home"
-      className="bg-gray-50 shadow-md px-2 py-1 dark:bg-tertiary-dark transition duration-300 ease-in-out"
+      className="bg-gray-50 px-2 py-1 dark:bg-[#001d3d] transition duration-300 ease-in-out"
     >
       <nav className="max-w-8xl mx-auto px-4 py-2 flex justify-between items-center">
         {/* Brand Title */}
