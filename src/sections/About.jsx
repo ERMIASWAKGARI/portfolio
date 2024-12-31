@@ -1,4 +1,3 @@
-// src/pages/About.js
 import { FaFilePdf } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
@@ -36,7 +35,7 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="py-12 sm:py-16 md:py-20 px-8 sm:px-12 md:px-16 bg-gray-50 dark:bg-[#003049]"
+      className="py-12 sm:py-16 md:py-20 px-8 sm:px-12 md:px-16 bg-[#fff] dark:bg-[#003049]"
     >
       <motion.h2
         className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-8 sm:mb-10"
@@ -56,7 +55,7 @@ export default function About() {
           }
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          <div className="relative w-36 h-36 sm:w-44 sm:h-44 mb-4 sm:mb-6 rounded-full overflow-hidden border-4 border-teal-400">
+          <div className="relative w-36 h-36 sm:w-44 sm:h-44 mb-4 sm:mb-6 rounded-full overflow-hidden border-4 border-teal-400 dark:border-teal-400">
             <img
               src="DSC_3312.jpg"
               alt="Ermias Wakgari"
@@ -72,23 +71,21 @@ export default function About() {
           </p>
 
           <div className="flex space-x-4 mt-4 sm:mt-6">
-            {/* Instagram Link */}
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="text-teal-400 hover:text-teal-500 transition text-xl"
+              className="text-purple-600 dark:text-teal-400 hover:text-purple-700 dark:hover:text-teal-500 transition text-xl"
             >
               <i className="fab fa-instagram"></i>
             </a>
-            {/* Facebook Link */}
             <a
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="text-teal-400 hover:text-teal-500 transition text-xl"
+              className="text-purple-600 dark:text-teal-400 hover:text-purple-700 dark:hover:text-teal-500 transition text-xl"
             >
               <i className="fab fa-facebook-f"></i>
             </a>
@@ -97,18 +94,17 @@ export default function About() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
-              className="text-teal-400 hover:text-teal-500 transition text-xl"
+              className="text-purple-600 dark:text-teal-400 hover:text-purple-700 dark:hover:text-teal-500 transition text-xl"
             >
               <i className="fab fa-twitter"></i>
             </a>
 
-            {/* Telegram Link */}
             <a
               href="https://telegram.org"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Telegram"
-              className="text-teal-400 hover:text-teal-500 transition text-xl"
+              className="text-purple-600 dark:text-teal-400 hover:text-purple-700 dark:hover:text-teal-500 transition text-xl"
             >
               <i className="fab fa-telegram-plane"></i>
             </a>
@@ -139,7 +135,7 @@ export default function About() {
             <a
               href="Resume.pdf"
               download
-              className="inline-flex  items-center justify-center bg-teal-400 text-[#000] py-2 px-4 rounded-lg hover:bg-teal-500 hover:scale-105 transition duration-300 shadow-lg"
+              className="inline-flex  items-center justify-center bg-teal-400  hover:bg-teal-500 dark:bg-teal-400 dark:hover:bg-teal-500 text-[#000] py-2 px-4 rounded-lg hover:scale-105 transition duration-300 shadow-lg"
               aria-label="Download CV"
             >
               <FaFilePdf className="mr-3" /> Download My CV

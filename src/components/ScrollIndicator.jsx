@@ -8,7 +8,7 @@ function ScrollIndicator() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersect0ing) {
             setCurrentSectionIndex(sections.indexOf(entry.target));
           }
         });
@@ -32,7 +32,7 @@ function ScrollIndicator() {
     <div className="fixed bottom-5 left-1/2 transform -translate-x-1/2">
       <button
         onClick={handleScrollToNext}
-        className="text-primary dark:text-secondary-light text-2xl animate-bounce flex flex-col items-center"
+        className="text-teal-400 dark:text-secondary-light text-2xl animate-bounce flex flex-col items-center"
         aria-label="Scroll to next section"
       >
         <svg

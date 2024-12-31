@@ -49,12 +49,10 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
         >
-          {/* Header */}
           <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-4 sm:mb-8">
             What I Offer
           </h2>
 
-          {/* Subtitle */}
           <p className="text-sm sm:text-base md:text-lg text-center text-secondary-dark dark:text-secondary-light mb-8 sm:mb-16">
             Delivering cutting-edge solutions tailored to your needs.
           </p>

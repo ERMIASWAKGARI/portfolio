@@ -6,7 +6,6 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 const Hero = () => {
   return (
     <section className="relative bg-neutral dark:bg-[#001d3d] px-4 sm:px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-8">
-      {/* Background Elements */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +20,6 @@ const Hero = () => {
         </svg>
       </div>
 
-      {/* Particle Effects */}
       <Particles
         id="tsparticles"
         options={{
@@ -40,7 +38,6 @@ const Hero = () => {
       />
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center">
-        {/* Left Section: Text Content */}
         <motion.div
           className="text-center lg:text-left max-w-prose mx-auto"
           whileInView={{
@@ -119,7 +116,6 @@ const Hero = () => {
             initial={{ opacity: 0, y: 50 }}
             viewport={{ once: false }}
           >
-            {/* View My Work Button */}
             <button
               aria-label="View my portfolio"
               className="flex items-center justify-center bg-teal-400 text-[#000] py-2 px-4 rounded-lg hover:bg-teal-500 hover:scale-105 transition duration-300 shadow-lg"
@@ -141,7 +137,6 @@ const Hero = () => {
               </a>
             </button>
 
-            {/* About Me Button */}
             <button
               aria-label="Learn more about me"
               className="flex items-center justify-center border border-teal-400 text-[#000]  py-2 px-4 rounded-lg  hover:text-[#000] dark:text-[#2dd4bf]  hover:scale-105 transition duration-300 shadow-lg"
@@ -155,7 +150,6 @@ const Hero = () => {
           <SocialMediaIcons justify="start" size={3} />
         </motion.div>
 
-        {/* Right Section: Enhanced Illustration */}
         <motion.div
           className="relative flex justify-center items-start"
           whileInView={{
@@ -172,7 +166,6 @@ const Hero = () => {
             loading="lazy"
             className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-full max-w-xs sm:max-w-sm lg:max-w-lg animate-refined-float mb-5"
           />
-          {/* Caption */}
           <div className="absolute bottom-0 text-center bg-teal-400 bg-opacity-80 text-[#000]  py-2 px-4 rounded-md shadow-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
             <p className="text-sm sm:text-base lg:text-lg font-medium truncate">
               &quot;Transforming Ideas into Scalable Solutions&quot;

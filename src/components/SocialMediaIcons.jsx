@@ -41,7 +41,6 @@ const SocialMediaIcons = ({ justify, size }) => {
           className="text-secondary-dark dark:text-secondary-light dark:hover:text-teal-400 hover:text-teal-400"
           aria-label={label}
         >
-          {/* Responsive icon sizes */}
           <i
             className={`${icon} text-lg sm:text-xl md:text-2xl lg:text-${size}xl`}
           ></i>

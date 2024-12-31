@@ -9,38 +9,34 @@ export default {
       },
       colors: {
         primary: {
-          DEFAULT: "#38b2ac", // Teal 500 - Primary color for branding elements like buttons
-          hover: "#2c7a7b", // Teal 600 - Hover state for primary buttons
-          dark: "#234e52", // Teal 800 - Primary color for dark mode
+          DEFAULT: "#38b2ac",
+          hover: "#2c7a7b",
+          dark: "#234e52",
         },
         secondary: {
-          DEFAULT: "#1a202c", // Primary text color in light mode
-          light: "#cbd5e0", // Light gray for subtle text or icons
-          dark: "#2d3748", // Secondary background in dark mode
+          DEFAULT: "#1a202c",
+          light: "#cbd5e0",
+          dark: "#2d3748",
         },
         tertiary: {
-          DEFAULT: "#ebfbee", // Gray 100 - Background for light mode
-          dark: "#2d3748", // Gray 800 - Background for dark mode
+          DEFAULT: "#ebfbee",
+          dark: "#2d3748",
           light: "#e7f5ff",
         },
         neutral: {
-          white: "#ffffff", // White backgrounds and text
+          white: "#ffffff",
         },
         accent: {
-          DEFAULT: "#e2e8f0", // Accent color for icons or highlights
+          DEFAULT: "#e2e8f0",
         },
       },
       fontSize: {
-        sm: ["0.875rem", "1.25rem"], // Small text
-        base: ["1rem", "1.5rem"], // Default
-        lg: ["1.125rem", "1.75rem"], // Large text
-        xl: ["1.25rem", "1.75rem"], // Extra large
+        sm: ["0.875rem", "1.25rem"],
+        lg: ["1.125rem", "1.75rem"],
+        xl: ["1.25rem", "1.75rem"],
       },
 
-      safelist: [
-        "hover:text-teal-500",
-        // Add more hover color classes here as needed
-      ],
+      safelist: ["hover:text-teal-500"],
       animation: {
         "border-spin": "spin-border 4s linear infinite",
       },

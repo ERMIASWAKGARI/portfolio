@@ -17,11 +17,10 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
-  // Close hamburger menu on screen resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
-        setIsOpen(false); // Close the hamburger menu on larger screens
+        setIsOpen(false);
       }
     };
 
@@ -31,7 +30,6 @@ const Header = () => {
     };
   }, []);
 
-  // Check scroll position to show/hide small navbar
   useEffect(() => {
     const handleScroll = () => {
       setShowSmallNavbar(window.scrollY > 80);
@@ -49,7 +47,6 @@ const Header = () => {
       className="bg-gray-50 px-2 py-1 dark:bg-[#001d3d] transition duration-300 ease-in-out"
     >
       <nav className="max-w-8xl mx-auto px-4 py-2 flex justify-between items-center">
-        {/* Brand Title */}
         <div className="flex items-center space-x-2">
           <div className="p-1 bg-teal-400 rounded-full nav-link">
             <img
@@ -60,7 +57,6 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Hamburger Menu for Mobile */}
         <div className="md:hidden">
           <button
             className="text-teal-400 dark:text-teal-400 focus:outline-none text-2xl p-2"
@@ -70,7 +66,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Desktop Links */}
         <div className="hidden md:flex space-x-6 items-center">
           {["Home", "About", "Skills", "Services", "Projects", "Contact"].map(
             (link) => (
@@ -109,7 +104,6 @@ const Header = () => {
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-end items-start">
           <div className="bg-neutral-white dark:bg-tertiary-dark shadow-lg p-3 rounded-md transition-transform duration-300 ease-in-out mt-16 mr-4">
-            {/* Close Button */}
             <button
               className="text-teal-400 dark:text-teal-400 absolute top-4 right-4 text-2xl"
               onClick={toggleMenu}
@@ -117,7 +111,6 @@ const Header = () => {
               ✖
             </button>
 
-            {/* Menu Links */}
             <div className="flex flex-col items-center space-y-4 ">
               {[
                 "Home",
@@ -136,7 +129,6 @@ const Header = () => {
                   {link}
                 </a>
               ))}
-              {/* View My Work Button */}
               <button
                 aria-label="View my portfolio"
                 className="flex items-center justify-center bg-teal-400 text-[#000] py-1 px-2 rounded hover:bg-teal-500 hover:scale-105 transition duration-300 shadow-lg"
@@ -166,18 +158,16 @@ const Header = () => {
         </div>
       )}
 
-      {/* Small Sticky Navbar */}
       {showSmallNavbar && (
         <div
           className={`fixed right-1 top-1/2 transform -translate-y-1/2 flex gap-2 items-center justify-center rounded-md z-30 transition-all duration-300`}
         >
-          {/* Links */}
           <div
             className={`p-4 rounded-md flex items-center justify-center flex-col gap-2 ${
               isCollapsed
                 ? "w-12 overflow-hidden opacity-0"
                 : "w-auto shadow-lg p-2 bg-neutral-white dark:bg-tertiary-dark "
-            } transition-all duration-500 ease-in-out`} // Animation for width, opacity
+            } transition-all duration-500 ease-in-out`}
           >
             {[
               { icon: <FaHome size={26} />, link: "#Home" },
@@ -197,7 +187,6 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Toggle Button */}
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
             className={`bg-teal-400 hover:bg-teal-500 text-[#000] px-2.5 py-5 rounded-full shadow-lg hover:scale-105 transition-all duration-300 ease-in-out ${

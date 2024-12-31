@@ -9,7 +9,7 @@ export default function ContactForm() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState(""); // for success/error messages
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,18 +19,18 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    setStatus(""); // Reset status message before sending
+    setStatus("");
 
     emailjs
       .send(
-        "service_6s27fau", // Replace with your EmailJS service ID
-        "template_0nwm2vs", // Replace with your EmailJS template ID
+        "service_6s27fau",
+        "template_0nwm2vs",
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        "nJ3KTKrPNeKD6bZmP" // Replace with your EmailJS public key
+        "nJ3KTKrPNeKD6bZmP"
       )
       .then(
         (response) => {

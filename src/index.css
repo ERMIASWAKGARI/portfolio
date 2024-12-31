@@ -7,12 +7,12 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
-  font-family: "Poppins", sans-serif; /* Set Roboto as the font for the whole site */
+  font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
-  overflow-x: hidden; /* Keep body horizontally constrained, but vertically scrollable */
+  overflow-x: hidden;
 }
 
 @keyframes slideIn {
@@ -27,8 +27,8 @@ body {
 }
 
 .nav-link {
-  opacity: 0; /* Initially hidden */
-  animation: slideIn 0.5s forwards; /* Apply the animation */
+  opacity: 0;
+  animation: slideIn 0.5s forwards;
 }
 
 .nav-link:nth-child(1) {
@@ -53,43 +53,6 @@ body {
   animation-delay: 0.7s;
 }
 
-/* styles/globals.css
-
-
-// Primary colors
-text-primary-900 -> #1F2937 (Dark Gray)
-bg-primary -> #4F46E5 (Indigo)
-hover:bg-primary-dark -> #4338CA (Darker Indigo)
-
-// Secondary colors
-bg-secondary -> #14B8A6 (Teal)
-hover:bg-secondary-dark -> #0D9488 (Darker Teal)
-
-// Accent color (optional)
-text-accent -> #F59E0B (Warm Yellow)
-
-// Backgrounds
-bg-gray-50 -> #F3F4F6 (Light Gray)
-bg-white -> #FFFFFF (White)
-
-
-
-*/
-/* Gradient Glow Effect */
-.gradient-glow::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(56, 178, 172, 0.3), transparent);
-  filter: blur(100px);
-  z-index: -1;
-}
-
-/* Refined Floating Animation */
 @keyframes refined-float {
   0%,
   100% {

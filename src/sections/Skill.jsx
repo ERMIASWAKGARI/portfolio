@@ -37,7 +37,6 @@ const Skill = () => {
 
   const renderTechList = (title, techs) => (
     <div className="flex flex-row items-center justify-center w-full space-y-6 gap-6">
-      {/* Title Section */}
       <motion.div
         className="text-left"
         whileInView={{ opacity: 1, x: 0 }}
@@ -50,7 +49,6 @@ const Skill = () => {
         <div className="w-16 sm:w-full h-1 bg-teal-400 dark:bg-primary-light mb-4"></div>
       </motion.div>
 
-      {/* Technologies List */}
       <div className="space-y-4">
         {techs.map((tech, index) => (
           <motion.div
@@ -99,23 +97,19 @@ const Skill = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: false }}
       >
-        {/* Skills Header */}
         <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-4 sm:mb-8">
           Skills
         </h2>
 
-        {/* Additional Text Below Header */}
         <p className="text-sm sm:text-base md:text-lg text-center text-secondary-dark dark:text-secondary-light mb-8 sm:mb-16">
           Over the years, I have honed my skills in these technologies.
         </p>
 
         <div className="flex flex-col lg:flex-row lg:space-x-12 space-y-12 lg:space-y-0">
-          {/* Front-End Technologies */}
           <div className="flex-1">
             {renderTechList("Frontend", frontEndTechs)}
           </div>
 
-          {/* Back-End Technologies */}
           <div className="flex-1">
             {renderTechList("Backend", backEndTechs)}
           </div>

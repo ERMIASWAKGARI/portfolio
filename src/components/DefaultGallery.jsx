@@ -79,10 +79,7 @@ export function GalleryWithTab() {
       projects: [
         {
           projectName: "Frontend Project 1",
-          images: [
-            { imageLink: "bankist.png" },
-            // { imageLink: "gazettesignup.jpg" },
-          ],
+          images: [{ imageLink: "bankist.png" }],
           githubLink: "https://github.com/ERMIASWAKGARI",
         },
         {
@@ -107,10 +104,7 @@ export function GalleryWithTab() {
         },
         {
           projectName: "Frontend Project 4",
-          images: [
-            { imageLink: "quiz.png" },
-            // { imageLink: "usepopcorn1.png" },
-          ],
+          images: [{ imageLink: "quiz.png" }],
           githubLink: "https://github.com/ERMIASWAKGARI",
         },
         {
@@ -184,9 +178,9 @@ export function GalleryWithTab() {
     <>
       <Tabs value="all" className="py-6sm:py-10">
         <TabsHeader
-          className="bg-gray-100 dark:bg-[#003049] text-secondary-dark dark:text-gray-100 rounded-lg"
+          className="bg-gray-100 dark:bg-[#003049] text-secondary-dark dark:text-gray-100 rounded-lg relative"
           indicatorProps={{
-            className: "bg-teal-400 dark:bg-teal-400",
+            className: "bg-teal-400 dark:bg-teal-400  rounded-t-md h-1",
           }}
         >
           {extendedCategories.map(({ label, value }) => (
@@ -194,9 +188,9 @@ export function GalleryWithTab() {
               key={value}
               value={value}
               className={({ selected }) =>
-                `text-sm font-medium ${
+                `relative text-sm font-medium transition-colors ${
                   selected
-                    ? "text-white dark:text-gray-900"
+                    ? "text-gray-900 dark:text-white font-bold"
                     : "text-gray-800 dark:text-gray-100"
                 }`
               }
@@ -232,13 +226,12 @@ export function GalleryWithTab() {
                     {project.projectName}
                   </div>
 
-                  {/* GitHub Link */}
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="absolute top-2 right-2 text-white bg-black bg-opacity-70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    onClick={(e) => e.stopPropagation()} // Prevent popup from opening
+                    onClick={(e) => e.stopPropagation()}
                   >
                     <FaGithub />
                   </a>

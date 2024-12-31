@@ -1,4 +1,3 @@
-// src/App.jsx
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -13,15 +12,12 @@ import ThemeToggle from "./components/ThemeToggle";
 function App() {
   return (
     <div>
-      {/* <SocialMediaIcons iconSize={28} hoverColor="teal-500" /> */}
-
       <Header />
       <ThemeToggle />
       <Hero />
       <About />
       <Skill />
       <Services />
-
       <Projects />
       <Contact />
       <Footer />
