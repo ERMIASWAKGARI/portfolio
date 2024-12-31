@@ -40,7 +40,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="bg-gray-50 dark:bg-[#003049] text-secondary dark:text-neutral-white py-12 px-4 md:px-16 lg:px-24"
+      className="bg-gray-50 dark:bg-[#003049] text-secondary dark:text-neutral-white py-12 px-6 sm:px-8 md:px-16 lg:px-24 "
     >
       <div className="container mx-auto text-center">
         <motion.div
@@ -68,12 +68,12 @@ const Services = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.4, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-neutral-white dark:bg-[#001d3d] shadow-md p-6 rounded-lg transition-transform transform hover:scale-105 duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]"
+              className="bg-neutral-white dark:bg-[#001d3d] shadow-md p-2 sm:p-2 md:p-4 lg:p-6 rounded-lg transition-transform transform hover:scale-105 duration-300 w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] "
             >
-              <div className="text-primary hover:text-primary-hover mb-4">
+              <div className="text-teal-400 mb-4">
                 <FontAwesomeIcon icon={service.icon} size="2x" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-primary dark:text-primary">
+              <h3 className="text-xl font-semibold mb-2 text-teal-400 dark:text-teal-400">
                 {service.title}
               </h3>
               <p className="text-sm md:text-base">{service.description}</p>
