@@ -37,6 +37,7 @@ const SocialMediaIcons = ({ justify, size }) => {
         <a
           key={label}
           href={href}
+          target="_blank"
           rel="noopener noreferrer"
           className="text-secondary-dark dark:text-secondary-light dark:hover:text-teal-400 hover:text-teal-400"
           aria-label={label}
