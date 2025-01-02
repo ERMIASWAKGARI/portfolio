@@ -89,7 +89,7 @@ const Skill = () => {
   return (
     <section
       id="skills"
-      className="py-10 sm:py-20 px-4 sm:px-8 lg:px-16 bg-neutral  dark:bg-[#001d3d]"
+      className="py-10 sm:py-20 px-4 sm:px-8 lg:px-16 bg-gray-50  dark:bg-[#001d3d]"
     >
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
