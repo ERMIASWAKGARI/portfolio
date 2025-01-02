@@ -27,7 +27,7 @@ function ScrollIndicator() {
           }
         });
       },
-      { threshold: [0.5, 0.8] }
+      { threshold: [0.1, 1.0] }
     );
 
     sectionElements.forEach((section) => {
@@ -51,7 +51,7 @@ function ScrollIndicator() {
     <div className="fixed bottom-3 left-1/2 transform -translate-x-1/2 z-50 flex gap-4">
       {currentSectionIndex > 0 && (
         <button
-          onClick={() => handleScrollToSection(currentSectionIndex - 1)}
+          onClick={() => handleScrollToSection(0)}
           className="text-teal-600 dark:text-teal-400 text-2xl animate-bounce flex flex-col items-center"
           aria-label="Scroll to previous section"
         >
