@@ -222,9 +222,6 @@ export function GalleryWithTab() {
                     src={project.images[0].imageLink}
                     alt={project.projectName}
                   />
-                  <div className="absolute bottom-0 left-0 bg-teal-400 dark:bg-teal-400 bg-opacity-70 text-gray-800 dark:text-gray-800 p-2 text-sm">
-                    {project.projectName}
-                  </div>
 
                   <a
                     href={project.githubLink}
