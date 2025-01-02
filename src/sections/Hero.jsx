@@ -5,7 +5,7 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const Hero = () => {
   return (
-    <section className="relative bg-neutral dark:bg-[#001d3d] px-4 sm:px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-8">
+    <section className="relative bg-gray-50 dark:bg-[#001d3d] px-4 sm:px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-8">
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -78,8 +78,8 @@ const Hero = () => {
             <span className="text-teal-400 dark:text-teal-400">
               <Typewriter
                 words={[
-                  "Web Developer.",
-                  "Front-end Developer.",
+                  "MERN Stack Developer.",
+                  "Front-end Specialist.",
                   "UI Designer.",
                 ]}
                 loop={true}
@@ -102,8 +102,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             viewport={{ once: false }}
           >
-            I design and build responsive, user-friendly websites and deliver
-            intuitive digital experiences.
+            I design and build highly responsive, full-stack web applications.
+            With a focus on scalable and efficient solutions, I deliver
+            intuitive and user-friendly digital experiences.
           </motion.p>
 
           <motion.div
