@@ -40,7 +40,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="bg-gray-50 dark:bg-[#003049] text-secondary dark:text-neutral-white py-12 px-6 sm:px-8 md:px-16 lg:px-24 "
+      className="bg-[#f0f9ff] dark:bg-[#003049] text-secondary dark:text-neutral-white py-12 px-6 sm:px-8 md:px-16 lg:px-24 "
     >
       <div className="container mx-auto text-center">
         <motion.div
