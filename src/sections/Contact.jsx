@@ -11,7 +11,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={sectionRef}
-      className="py-20 px-8 md:px-16 lg:px-24 bg-gray-50 dark:bg-[#003049]"
+      className="py-20 px-8 md:px-16 lg:px-24 bg-[#f0f9ff] dark:bg-[#003049]"
     >
       <motion.h2
         className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-8 sm:mb-10"

@@ -48,6 +48,10 @@ export default function ContactForm() {
       });
   };
 
+  const handleCloseStatus = () => {
+    setStatus("");
+  };
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -91,11 +95,17 @@ export default function ContactForm() {
 
       {status && (
         <div
-          className={`mt-6 text-center text-sm sm:text-base md:text-lg font-semibold ${
+          className={`relative mt-6 text-center text-sm sm:text-base md:text-lg font-semibold ${
             status.includes("success") ? "text-teal-400" : "text-red-500"
           }`}
         >
           {status}
+          <button
+            onClick={handleCloseStatus}
+            className="absolute top-0 right-0 text-lg font-bold text-gray-500 hover:text-gray-700"
+          >
+            &times;
+          </button>
         </div>
       )}
     </form>
