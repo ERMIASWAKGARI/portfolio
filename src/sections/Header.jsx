@@ -67,35 +67,21 @@ const Header = () => {
         </div>
 
         <div className="hidden md:flex space-x-6 items-center">
-          {["Home", "About", "Skills", "Services", "Projects", "Contact"].map(
-            (link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
-                className="text-base text-secondary dark:text-secondary-light hover:text-teal-400 dark:hover:text-teal-400 transition duration-300 nav-link "
-              >
-                {link}
-              </a>
-            )
-          )}
+          {["Home", "About", "Skills", "Services", "Projects"].map((link) => (
+            <a
+              key={link}
+              href={`#${link.toLowerCase()}`}
+              className="text-base text-secondary dark:text-secondary-light hover:text-teal-400 dark:hover:text-teal-400 transition duration-300 nav-link "
+            >
+              {link}
+            </a>
+          ))}
           <button
             aria-label="View my portfolio"
             className="flex items-center justify-center bg-teal-400 text-[#000] py-2 px-4 rounded-lg hover:bg-teal-500 hover:scale-105 transition duration-300 shadow-lg nav-link"
           >
-            <a href="#projects" className="flex items-center">
-              <span className="text-sm lg:text-base">View My Work</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="w-5 h-5 ml-2"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  d="M5 12h14m0 0l-6-6m6 6l-6 6"
-                ></path>
-              </svg>
+            <a href="#contact" className="flex items-center">
+              <span className="text-sm lg:text-base">Get in Touch</span>
             </a>
           </button>
         </div>
@@ -112,23 +98,18 @@ const Header = () => {
             </button>
 
             <div className="flex flex-col items-center space-y-4 ">
-              {[
-                "Home",
-                "About",
-                "Skills",
-                "Services",
-                "Projects",
-                "Contact",
-              ].map((link) => (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
-                  className="text-sm sm:text-base md:text-lg text-secondary dark:text-secondary-light hover:text-teal-400 dark:hover:text-teal-400 transition duration-300"
-                  onClick={toggleMenu}
-                >
-                  {link}
-                </a>
-              ))}
+              {["Home", "About", "Skills", "Services", "Projects"].map(
+                (link) => (
+                  <a
+                    key={link}
+                    href={`#${link.toLowerCase()}`}
+                    className="text-sm sm:text-base md:text-lg text-secondary dark:text-secondary-light hover:text-teal-400 dark:hover:text-teal-400 transition duration-300"
+                    onClick={toggleMenu}
+                  >
+                    {link}
+                  </a>
+                )
+              )}
               <button
                 aria-label="View my portfolio"
                 className="flex items-center justify-center bg-teal-400 text-[#000] py-1 px-2 rounded hover:bg-teal-500 hover:scale-105 transition duration-300 shadow-lg"
@@ -138,19 +119,7 @@ const Header = () => {
                   href="#projects"
                   className="flex items-center text-xs sm:text-sm lg:text-base"
                 >
-                  <span>View My Work</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    className="w-5 h-5 ml-2"
-                  >
-                    <path
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      d="M5 12h14m0 0l-6-6m6 6l-6 6"
-                    ></path>
-                  </svg>
+                  <span>Get in Touch</span>
                 </a>
               </button>
             </div>
