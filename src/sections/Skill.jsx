@@ -19,7 +19,7 @@ const Skill = () => {
     { icon: <FaReact color="#61DAFB" />, name: "React" },
     { icon: <SiTypescript color="#3178C6" />, name: "TypeScript" },
     { icon: <FaJs color="#F7DF1E" />, name: "JavaScript" },
-    { icon: <SiTailwindcss color="#38B2AC" />, name: "Tailwind CSS" },
+    { icon: <SiTailwindcss color="#38B2AC" />, name: "Tailwind" },
     { icon: <FaBootstrap color="#7952B3" />, name: "Bootstrap" },
   ];
 
