@@ -57,7 +57,7 @@ const Skill = () => {
             transition={{ delay: index * 0.1, duration: 0.4 }}
           >
             <div
-              className="text-4xl lg:text-5xl p-4 rounded-full"
+              className="text-3xl lg:text-4xl p-4 rounded-full"
               style={{
                 backgroundColor: tech.icon.props.color + "33", // Add transparency for a subtle background
               }}
