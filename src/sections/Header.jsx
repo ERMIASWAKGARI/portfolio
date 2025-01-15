@@ -139,20 +139,28 @@ const Header = () => {
             } transition-all duration-500 ease-in-out`}
           >
             {[
-              { icon: <FaHome size={26} />, link: "#Home" },
-              { icon: <FaUser size={26} />, link: "#About" },
+              { icon: <FaHome size={26} />, link: "#home" },
+              { icon: <FaUser size={26} />, link: "#about" },
               { icon: <FaCode size={26} />, link: "#skills" },
-              { icon: <FaServicestack size={26} />, link: "#Services" },
-              { icon: <FaBriefcase size={26} />, link: "#Projects" },
-              { icon: <FaEnvelope size={26} />, link: "#Contact" },
+              { icon: <FaServicestack size={26} />, link: "#services" },
+              { icon: <FaBriefcase size={26} />, link: "#projects" },
+              { icon: <FaEnvelope size={26} />, link: "#contact" },
             ].map(({ icon, link }) => (
-              <a
+              <span
                 key={link}
-                href={`${link.toLowerCase()}`}
-                className={`flex items-center text-lg text-secondary dark:text-secondary-light hover:text-teal-400 dark:hover:text-teal-400 transition duration-300`}
+                className={`flex items-center text-lg text-secondary dark:text-secondary-light hover:text-teal-400 dark:hover:text-teal-400 transition duration-300 ${
+                  isCollapsed
+                    ? "pointer-events-none opacity-50"
+                    : "pointer-events-auto"
+                }`}
               >
-                <span>{icon}</span>
-              </a>
+                {!isCollapsed && (
+                  <a href={link} className="flex items-center">
+                    {icon}
+                  </a>
+                )}
+                {isCollapsed && <span>{icon}</span>}
+              </span>
             ))}
           </div>
 
