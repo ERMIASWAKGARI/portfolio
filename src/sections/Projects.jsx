@@ -1,5 +1,5 @@
-import { GalleryWithTab } from "../components/DefaultGallery";
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import { ProjectGallery } from '../components/DefaultGallery';
 
 export default function Projects() {
   return (
@@ -17,7 +17,7 @@ export default function Projects() {
           Projects
         </h2>
 
-        <GalleryWithTab />
+        <ProjectGallery />
       </motion.div>
     </section>
   );

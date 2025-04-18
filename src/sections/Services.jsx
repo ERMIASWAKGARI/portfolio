@@ -1,38 +1,38 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion } from "framer-motion";
 import {
+  faCloud,
   faCode,
+  faDatabase,
   faDesktop,
   faServer,
-  faDatabase,
-  faCloud,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from 'framer-motion';
 
 const Services = () => {
   const services = [
     {
-      title: "Full-Stack Development",
-      description: "Building modern web applications for seamless experiences.",
+      title: 'Full-Stack Development',
+      description: 'Building modern web applications for seamless experiences.',
       icon: faDesktop,
     },
     {
-      title: "Frontend Development",
-      description: "Creating visually appealing, responsive interfaces.",
+      title: 'Frontend Development',
+      description: 'Creating visually appealing, responsive interfaces.',
       icon: faCode,
     },
     {
-      title: "Backend Development",
-      description: "Building scalable server-side applications.",
+      title: 'Backend Development',
+      description: 'Building scalable server-side applications.',
       icon: faServer,
     },
     {
-      title: "Database Management",
-      description: "Designing efficient databases with MongoDB and MySQL. ",
+      title: 'Database Management',
+      description: 'Designing efficient databases with MongoDB and MySQL. ',
       icon: faDatabase,
     },
     {
-      title: "API Development",
-      description: "Creating RESTful APIs and integrating services.",
+      title: 'API Development',
+      description: 'Creating RESTful APIs and integrating services.',
       icon: faCloud,
     },
   ];
@@ -71,7 +71,7 @@ const Services = () => {
               <div className="text-teal-400 mb-4">
                 <FontAwesomeIcon icon={service.icon} size="2x" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-teal-400 dark:text-teal-400">
+              <h3 className="text-xl font-semibold mb-2 text-teal-400">
                 {service.title}
               </h3>
               <p className="text-sm md:text-base">{service.description}</p>

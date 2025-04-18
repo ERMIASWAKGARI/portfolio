@@ -1,160 +1,60 @@
-import {
-  Tabs,
-  TabsHeader,
-  TabsBody,
-  Tab,
-  TabPanel,
-} from "@material-tailwind/react";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 import {
   FaChevronLeft,
   FaChevronRight,
-  FaTimes,
   FaGithub,
-} from "react-icons/fa";
+  FaTimes,
+} from 'react-icons/fa';
 
-export function GalleryWithTab() {
-  // eslint-disable-next-line no-unused-vars
-  const [scrollDirection, setScrollDirection] = useState("down");
+export function ProjectGallery() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentImages, setCurrentImages] = useState([]);
 
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setScrollDirection("up");
-      } else {
-        setScrollDirection("down");
-      }
-      lastScrollY = window.scrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const categories = [
+  const projects = [
     {
-      label: "Fullstack",
-      value: "fullstack",
-      projects: [
-        {
-          projectName: "Fullstack Project 1",
-          images: [
-            { imageLink: "gazette0.png" },
-            { imageLink: "gazettelogin.jpg" },
-            { imageLink: "gazettesignup.jpg" },
-            { imageLink: "gazette-full.jpg" },
-            { imageLink: "gazettecreatepost.jpg" },
-            { imageLink: "gazettepost.jpg" },
-            { imageLink: "gazetteprofile.jpg" },
-          ],
-          githubLink: "https://github.com/ERMIASWAKGARI",
-        },
-        {
-          projectName: "Fullstack Project 2",
-          images: [
-            { imageLink: "nodefarm1.png" },
-            { imageLink: "nodefarm2.png" },
-          ],
-          githubLink: "https://github.com/ERMIASWAKGARI",
-        },
-        {
-          projectName: "Fullstack Project 2",
-          images: [{ imageLink: "php1.png" }],
-          githubLink: "https://github.com/ERMIASWAKGARI",
-        },
+      projectName: 'Blog Website',
+      images: [
+        { imageLink: './../../public/gazette0.png' },
+        { imageLink: './../../public/gazette1.jpg' },
+        { imageLink: './../../public/gazette2.png' },
+        { imageLink: './../../public/gazettesignup.jpg' },
+        { imageLink: './../../public/gazettelogin.jpg' },
+        { imageLink: './../../public/gazette-full.jpg' },
+        { imageLink: './../../public/gazettepost.jpg' },
+        { imageLink: './../../public/gazetteprofile.jpg' },
       ],
+      githubLink: 'https://github.com/ERMIASWAKGARI',
     },
     {
-      label: "Frontend",
-      value: "frontend",
-      projects: [
-        {
-          projectName: "Frontend Project 1",
-          images: [{ imageLink: "bankist.png" }],
-          githubLink: "https://github.com/ERMIASWAKGARI",
-        },
-        {
-          projectName: "Frontend Project 2",
-          images: [
-            { imageLink: "worldwise1.png" },
-            { imageLink: "worldwise2.png" },
-            { imageLink: "worldwise3.png" },
-            { imageLink: "worldwise4.png" },
-            { imageLink: "worldwise5.png" },
-            { imageLink: "worldwise6.png" },
-          ],
-          githubLink: "https://github.com/ERMIASWAKGARI",
-        },
-        {
-          projectName: "Frontend Project 3",
-          images: [
-            { imageLink: "usepopcorn0.png" },
-            { imageLink: "usepopcorn1.png" },
-          ],
-          githubLink: "https://github.com/ERMIASWAKGARI",
-        },
-        {
-          projectName: "Frontend Project 4",
-          images: [{ imageLink: "quiz.png" }],
-          githubLink: "https://github.com/ERMIASWAKGARI",
-        },
-        {
-          projectName: "Frontend Project 5",
-          images: [
-            { imageLink: "foodorder0.png" },
-            { imageLink: "foodorder2.png" },
-            { imageLink: "foodorder3.png" },
-          ],
-          githubLink: "https://github.com/ERMIASWAKGARI",
-        },
-        {
-          projectName: "Frontend Project 6",
-          images: [{ imageLink: "game1.png" }],
-          githubLink: "https://github.com/ERMIASWAKGARI",
-        },
+      projectName: 'E-commerce Platform',
+      images: [
+        { imageLink: './../../public/ecommerce1.png' },
+        { imageLink: './../../public/ecommerce2.png' },
+        { imageLink: './../../public/ecommerce3.png' },
+        { imageLink: './../../public/ecommerce4.png' },
+        { imageLink: './../../public/ecommerce5.png' },
       ],
+      githubLink: 'https://github.com/ERMIASWAKGARI',
     },
     {
-      label: "Backend",
-      value: "backend",
-      projects: [
-        {
-          projectName: "Backend Project 1",
-          images: [
-            { imageLink: "forkify1.png" },
-            { imageLink: "forkify2.png" },
-            { imageLink: "forkify3.png" },
-            { imageLink: "forkify4.png" },
-          ],
-          githubLink: "https://github.com/ERMIASWAKGARI",
-        },
-        {
-          projectName: "Backend Project 2",
-          images: [{ imageLink: "faraway.png" }],
-          githubLink: "https://github.com/ERMIASWAKGARI",
-        },
-        {
-          projectName: "Backend Project 3",
-          images: [{ imageLink: "guessmynumber.png" }],
-          githubLink: "https://github.com/ERMIASWAKGARI",
-        },
+      projectName: 'Travel tracker',
+      images: [
+        { imageLink: './../../public/worldwise1.png' },
+        { imageLink: './../../public/worldwise2.png' },
+        { imageLink: './../../public/worldwise3.png' },
+        { imageLink: './../../public/worldwise4.png' },
+        { imageLink: './../../public/worldwise5.png' },
+        { imageLink: './../../public/worldwise6.png' },
       ],
+      githubLink: 'https://github.com/ERMIASWAKGARI',
     },
-  ];
-
-  const allProjects = categories.flatMap((category) => category.projects);
-  const extendedCategories = [
-    { label: "All", value: "all", projects: allProjects },
-    ...categories,
+    {
+      projectName: 'Social Media WebApp',
+      images: [{ imageLink: './../../public/connectEducator1.png' }],
+      githubLink: 'https://github.com/ERMIASWAKGARI',
+    },
   ];
 
   const openPopup = (images, index) => {
@@ -168,7 +68,7 @@ export function GalleryWithTab() {
   const navigateImage = (direction) => {
     setCurrentImageIndex((prevIndex) => {
       const totalImages = currentImages.length;
-      return direction === "left"
+      return direction === 'left'
         ? (prevIndex - 1 + totalImages) % totalImages
         : (prevIndex + 1) % totalImages;
     });
@@ -176,68 +76,44 @@ export function GalleryWithTab() {
 
   return (
     <>
-      <Tabs value="all" className="py-6sm:py-10">
-        <TabsHeader
-          className="bg-gray-100 dark:bg-[#003049] text-secondary-dark dark:text-gray-100 rounded-lg relative"
-          indicatorProps={{
-            className: "bg-teal-400 dark:bg-teal-400  rounded-t-md h-1",
-          }}
-        >
-          {extendedCategories.map(({ label, value }) => (
-            <Tab
-              key={value}
-              value={value}
-              className={({ selected }) =>
-                `relative text-sm font-medium transition-colors ${
-                  selected
-                    ? "text-gray-900 dark:text-white font-bold"
-                    : "text-gray-800 dark:text-gray-100"
-                }`
-              }
+      <div className="py-6 sm:py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              className="relative overflow-hidden rounded-lg shadow-lg bg-gray-200 dark:bg-gray-700 group"
+              onClick={() => openPopup(project.images, 0)}
+              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
             >
-              {label}
-            </Tab>
-          ))}
-        </TabsHeader>
-
-        <TabsBody>
-          {extendedCategories.map(({ value, projects }) => (
-            <TabPanel
-              key={value}
-              value={value}
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
-            >
-              {projects.map((project, index) => (
-                <motion.div
-                  key={index}
-                  className="relative overflow-hidden rounded-lg shadow-lg bg-gray-200 dark:bg-gray-700 group"
-                  onClick={() => openPopup(project.images, 0)}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
+              <div className="relative">
+                <img
+                  className="w-full object-cover"
+                  src={project.images[0].imageLink}
+                  alt={project.projectName}
+                />
+                {/* Project name overlay - now with inline-block background */}
+                <div className="absolute bottom-1 right-1">
+                  <h3 className="text-sm sm:text-base font-semibold text-gray-800 dark:text-neutral-white truncate inline-block bg-gray-100 dark:bg-gray-500 bg-opacity-70 rounded px-2 py-1 max-w-[100%]">
+                    {project.projectName}
+                  </h3>
+                </div>
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute top-2 right-2 text-gray-800 dark:text-neutral-white bg-gray-100 dark:bg-gray-500  p-2 rounded-full transition-opacity duration-300"
+                  onClick={(e) => e.stopPropagation()}
                 >
-                  <img
-                    className="w-full h-auto object-cover"
-                    src={project.images[0].imageLink}
-                    alt={project.projectName}
-                  />
-
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute top-2 right-2 text-white bg-black bg-opacity-70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <FaGithub />
-                  </a>
-                </motion.div>
-              ))}
-            </TabPanel>
+                  <FaGithub />
+                </a>
+              </div>
+            </motion.div>
           ))}
-        </TabsBody>
-      </Tabs>
+        </div>
+      </div>
 
       {isPopupOpen && (
         <div
@@ -253,6 +129,9 @@ export function GalleryWithTab() {
               alt="Current Project"
               className="max-h-[80vh] mx-auto rounded"
             />
+            <div className="text-center mt-2 text-gray-800 dark:text-white">
+              {currentImageIndex + 1} of {currentImages.length}
+            </div>
             <button
               className="absolute top-2 right-2 text-white bg-black bg-opacity-70 p-2 rounded-full"
               onClick={closePopup}
@@ -261,13 +140,13 @@ export function GalleryWithTab() {
             </button>
             <button
               className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white bg-black bg-opacity-70 p-2 rounded-full"
-              onClick={() => navigateImage("left")}
+              onClick={() => navigateImage('left')}
             >
               <FaChevronLeft />
             </button>
             <button
               className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white bg-black bg-opacity-70 p-2 rounded-full"
-              onClick={() => navigateImage("right")}
+              onClick={() => navigateImage('right')}
             >
               <FaChevronRight />
             </button>
