@@ -1,16 +1,16 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { motion } from 'framer-motion'
+import { useState } from 'react'
 import {
   FaChevronLeft,
   FaChevronRight,
   FaGithub,
   FaTimes,
-} from 'react-icons/fa';
+} from 'react-icons/fa'
 
 export function ProjectGallery() {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [currentImages, setCurrentImages] = useState([]);
+  const [isPopupOpen, setIsPopupOpen] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [currentImages, setCurrentImages] = useState([])
 
   const projects = [
     {
@@ -55,24 +55,36 @@ export function ProjectGallery() {
       images: [{ imageLink: 'connectEducator1.png' }],
       githubLink: 'https://github.com/ERMIASWAKGARI',
     },
-  ];
+    {
+      projectName: 'SoftExit',
+      images: [
+        { imageLink: 'Screenshot 2025-06-07 220146.png' },
+        { imageLink: 'Screenshot 2025-06-07 220320.png' },
+        { imageLink: 'Screenshot 2025-06-07 220344.png' },
+        { imageLink: 'Screenshot 2025-06-07 220419.png' },
+        { imageLink: 'Screenshot 2025-06-07 220437.png' },
+        { imageLink: 'Screenshot 2025-06-07 220454.png' },
+      ],
+      githubLink: 'https://github.com/ERMIASWAKGARI',
+    },
+  ]
 
   const openPopup = (images, index) => {
-    setCurrentImages(images);
-    setCurrentImageIndex(index);
-    setIsPopupOpen(true);
-  };
+    setCurrentImages(images)
+    setCurrentImageIndex(index)
+    setIsPopupOpen(true)
+  }
 
-  const closePopup = () => setIsPopupOpen(false);
+  const closePopup = () => setIsPopupOpen(false)
 
   const navigateImage = (direction) => {
     setCurrentImageIndex((prevIndex) => {
-      const totalImages = currentImages.length;
+      const totalImages = currentImages.length
       return direction === 'left'
         ? (prevIndex - 1 + totalImages) % totalImages
-        : (prevIndex + 1) % totalImages;
-    });
-  };
+        : (prevIndex + 1) % totalImages
+    })
+  }
 
   return (
     <>
@@ -121,7 +133,7 @@ export function ProjectGallery() {
           onClick={closePopup}
         >
           <div
-            className="relative w-full bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg max-w-3xl max-h-[90vh] overflow-auto"
+            className="relative w-full bg-white dark:bg-gray-800 p-2 rounded-lg shadow-lg max-w-3xl max-h-[90vh] overflow-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <img
@@ -154,5 +166,5 @@ export function ProjectGallery() {
         </div>
       )}
     </>
-  );
+  )
 }
