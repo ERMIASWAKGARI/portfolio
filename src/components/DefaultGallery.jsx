@@ -15,6 +15,20 @@ export function ProjectGallery() {
 
   const projects = [
     {
+      projectName: 'DonateLink',
+      images: [
+        { imageLink: 'gazette0.png' },
+        { imageLink: 'gazette1.jpg' },
+        { imageLink: 'gazette2.png' },
+        { imageLink: 'gazettesignup.jpg' },
+        { imageLink: 'gazettelogin.jpg' },
+        { imageLink: 'gazette-full.jpg' },
+        { imageLink: 'gazettepost.jpg' },
+        { imageLink: 'gazetteprofile.jpg' },
+      ],
+      githubLink: 'https://github.com/ERMIASWAKGARI',
+    },
+    {
       projectName: 'Blog Website',
       images: [
         { imageLink: 'gazette0.png' },
