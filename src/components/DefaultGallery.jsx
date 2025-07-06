@@ -81,18 +81,18 @@ export function ProjectGallery() {
       images: [{ imageLink: 'connectEducator1.png' }],
       githubLink: 'https://github.com/ERMIASWAKGARI',
     },
-    {
-      projectName: 'SoftExit',
-      images: [
-        { imageLink: 'Screenshot 2025-06-07 220146.png' },
-        { imageLink: 'Screenshot 2025-06-07 220320.png' },
-        { imageLink: 'Screenshot 2025-06-07 220344.png' },
-        { imageLink: 'Screenshot 2025-06-07 220419.png' },
-        { imageLink: 'Screenshot 2025-06-07 220437.png' },
-        { imageLink: 'Screenshot 2025-06-07 220454.png' },
-      ],
-      githubLink: 'https://github.com/ERMIASWAKGARI',
-    },
+    // {
+    //   projectName: 'SoftExit',
+    //   images: [
+    //     { imageLink: 'Screenshot 2025-06-07 220146.png' },
+    //     { imageLink: 'Screenshot 2025-06-07 220320.png' },
+    //     { imageLink: 'Screenshot 2025-06-07 220344.png' },
+    //     { imageLink: 'Screenshot 2025-06-07 220419.png' },
+    //     { imageLink: 'Screenshot 2025-06-07 220437.png' },
+    //     { imageLink: 'Screenshot 2025-06-07 220454.png' },
+    //   ],
+    //   githubLink: 'https://github.com/ERMIASWAKGARI',
+    // },
   ]
 
   const openPopup = (images, index) => {
