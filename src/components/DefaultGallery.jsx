@@ -127,10 +127,14 @@ export function ProjectGallery() {
     setCurrentProject(project);
     setCurrentImageIndex(index);
     setIsPopupOpen(true);
+    // Prevent body scroll when popup is open
+    document.body.style.overflow = "hidden";
   }, []);
 
   const closePopup = useCallback(() => {
     setIsPopupOpen(false);
+    // Re-enable body scroll when popup is closed
+    document.body.style.overflow = "unset";
     setTimeout(() => {
       setCurrentProject(null);
       setCurrentImageIndex(0);
@@ -173,6 +177,13 @@ export function ProjectGallery() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isPopupOpen, closePopup, navigateImage]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -343,7 +354,7 @@ export function ProjectGallery() {
       <AnimatePresence mode="wait">
         {isPopupOpen && currentProject && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4 overflow-y-auto"
             onClick={closePopup}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -351,7 +362,7 @@ export function ProjectGallery() {
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden"
+              className="relative bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-6xl w-full my-8 overflow-hidden"
               onClick={(e) => e.stopPropagation()}
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -363,7 +374,7 @@ export function ProjectGallery() {
               }}
             >
               {/* Header */}
-              <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+              <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 sticky top-0 z-10">
                 <div className="flex items-center gap-4">
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                     {currentProject.projectName}
@@ -383,10 +394,10 @@ export function ProjectGallery() {
                 </motion.button>
               </div>
 
-              {/* Main Content */}
-              <div className="flex flex-col lg:flex-row h-full">
+              {/* Main Content - Scrollable */}
+              <div className="flex flex-col lg:flex-row max-h-[calc(90vh-80px)]">
                 {/* Image Gallery */}
-                <div className="flex-1 p-6 flex items-center justify-center bg-gray-50 dark:bg-gray-800 relative min-h-[400px]">
+                <div className="flex-1 p-6 flex items-center justify-center bg-gray-50 dark:bg-gray-800 relative min-h-[400px] lg:min-h-[500px]">
                   <AnimatePresence custom={direction} mode="popLayout">
                     <motion.img
                       key={currentImageIndex}
@@ -407,7 +418,7 @@ export function ProjectGallery() {
                   {currentProject.images.length > 1 && (
                     <>
                       <motion.button
-                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-3 rounded-full backdrop-blur-sm"
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-3 rounded-full backdrop-blur-sm z-20"
                         onClick={(e) => {
                           e.stopPropagation();
                           navigateImage("left");
@@ -419,7 +430,7 @@ export function ProjectGallery() {
                       </motion.button>
 
                       <motion.button
-                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-3 rounded-full backdrop-blur-sm"
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-3 rounded-full backdrop-blur-sm z-20"
                         onClick={(e) => {
                           e.stopPropagation();
                           navigateImage("right");
@@ -433,13 +444,13 @@ export function ProjectGallery() {
                   )}
 
                   {/* Image Counter */}
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm">
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm z-20">
                     {currentImageIndex + 1} / {currentProject.images.length}
                   </div>
                 </div>
 
-                {/* Project Details */}
-                <div className="lg:w-80 p-6 border-l border-gray-200 dark:border-gray-700">
+                {/* Project Details - Scrollable */}
+                <div className="lg:w-80 p-6 border-l border-gray-200 dark:border-gray-700 overflow-y-auto">
                   <div className="space-y-6">
                     {/* Description */}
                     <div>
