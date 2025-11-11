@@ -43,7 +43,7 @@ export function ProjectGallery() {
         { imageLink: "donate-link10.png" },
       ],
       githubLink: "https://github.com/ERMIASWAKGARI/donatelink",
-      deployedLink: "https://donatelink-app.vercel.app",
+      deployedLink: "https://donate-link.netlify.app/",
       category: "Full Stack",
     },
     {
@@ -67,7 +67,7 @@ export function ProjectGallery() {
         { imageLink: "gazette-full.jpg" },
       ],
       githubLink: "https://github.com/ERMIASWAKGARI/blog",
-      deployedLink: "https://gazette-blog.vercel.app",
+      deployedLink: "https://blog-peach-three-24.vercel.app/",
       category: "Full Stack",
     },
     {
@@ -106,8 +106,8 @@ export function ProjectGallery() {
         { imageLink: "worldwise4.png" },
         { imageLink: "worldwise5.png" },
       ],
-      githubLink: "https://github.com/ERMIASWAKGARI/worldwise",
-      deployedLink: "https://worldwise-travel.vercel.app",
+      githubLink: "https://github.com/ERMIASWAKGARI",
+      // deployedLink: "https://worldwise-travel.vercel.app",
       category: "Frontend",
     },
     {
