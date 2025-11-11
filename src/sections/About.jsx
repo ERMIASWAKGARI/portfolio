@@ -57,7 +57,7 @@ export default function About() {
         >
           <div className="relative w-36 h-36 sm:w-44 sm:h-44 mb-4 sm:mb-6 rounded-full overflow-hidden border-4 border-teal-400 dark:border-teal-400">
             <img
-              src="DSC_3312.jpg"
+              src="my_pic.jpg"
               alt="Ermias Wakgari"
               className="w-full h-full object-cover"
             />
