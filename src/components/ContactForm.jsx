@@ -23,14 +23,14 @@ export default function ContactForm() {
 
     emailjs
       .send(
-        "service_6s27fau",
-        "template_0nwm2vs",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        "nJ3KTKrPNeKD6bZmP"
+        import.meta.env.VITE_EMAILJS_PUBLIC
       )
       .then(
         (response) => {
