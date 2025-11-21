@@ -30,7 +30,7 @@ export default function ContactInfo() {
           </span>
         </div>
         <p className="text-gray-700 dark:text-secondary-light ml-9">
-          Jimma, Ethiopia
+          Addis Ababa, Ethiopia
         </p>
       </div>
 
