@@ -540,7 +540,7 @@ export function ProjectGallery() {
                         <h3 className="font-semibold text-gray-900 dark:text-white mb-3">
                           All Images ({currentProject.images.length})
                         </h3>
-                        <div className="grid grid-cols-4 gap-2 max-h-32 overflow-y-auto">
+                        <div className="grid grid-cols-4 gap-2 max-h-32 overflow-y-auto overflow-hidden overscroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-700">
                           {currentProject.images.map((image, index) => (
                             <motion.button
                               key={index}
