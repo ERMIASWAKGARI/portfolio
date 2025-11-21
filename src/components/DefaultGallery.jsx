@@ -47,6 +47,30 @@ export function ProjectGallery() {
       category: "Full Stack",
     },
     {
+      projectName: "Blog Website",
+      description:
+        "Modern blogging platform with rich text editing and social features.",
+      technologies: [
+        "React",
+        "TailwindCSS",
+        "Node.js",
+        "Express",
+        "Typescript",
+        "MongoDB",
+      ],
+      images: [
+        { imageLink: "gazette0.png" },
+        { imageLink: "gazette1.jpg" },
+        { imageLink: "gazette2.png" },
+        { imageLink: "gazettesignup.jpg" },
+        { imageLink: "gazettelogin.jpg" },
+        { imageLink: "gazette-full.jpg" },
+      ],
+      githubLink: "https://github.com/ERMIASWAKGARI/blog",
+      deployedLink: "https://blog-peach-three-24.vercel.app/",
+      category: "Full Stack",
+    },
+    {
       projectName: "SoftExit",
       description:
         "National exit exam preparation platform with practice tests and performance tracking.",
