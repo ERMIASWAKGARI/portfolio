@@ -414,8 +414,12 @@ export function ProjectGallery() {
                 </motion.button>
               </div>
 
-              {/* Main Content - Scrollable */}
-              <div className="flex flex-col lg:flex-row max-h-[calc(90vh-80px)]">
+              {/* Main Content - Scrollable
+              
+              customize the scrollbar
+
+              */}
+              <div className="flex flex-col lg:flex-row max-h-[calc(90vh-80px)] overflow-hidden scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-700">
                 {/* Image Gallery */}
                 <div className="flex-1 p-6 flex items-center justify-center bg-gray-50 dark:bg-gray-800 relative min-h-[400px] lg:min-h-[500px]">
                   <AnimatePresence custom={direction} mode="popLayout">
