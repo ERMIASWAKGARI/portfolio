@@ -1,4 +1,5 @@
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import ScrollIndicator from "./components/ScrollIndicator";
 import ThemeToggle from "./components/ThemeToggle";
 import About from "./sections/About";
@@ -26,6 +27,7 @@ function App() {
       <Contact />
       <Footer />
       <ScrollIndicator />
+      <SpeedInsights />
     </div>
   );
 }
