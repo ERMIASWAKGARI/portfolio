@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaCodeBranch, FaLaptopCode } from "react-icons/fa";
+import { FaLaptopCode } from "react-icons/fa";
 
 const experience = {
   role: "Full Stack Developer Intern",
@@ -47,7 +47,7 @@ export default function Experience() {
             {experience.company}
           </p>
 
-          <ul className="mt-5 space-y-3">
+          {/* <ul className="mt-5 space-y-3">
             {experience.highlights.map((item) => (
               <li
                 key={item}
@@ -57,7 +57,7 @@ export default function Experience() {
                 <span>{item}</span>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </motion.div>
       </div>
     </section>
