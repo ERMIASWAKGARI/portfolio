@@ -5,11 +5,6 @@ const experience = {
   role: "Full Stack Developer Intern",
   company: "Debbal Softwares, Addis Ababa",
   period: "Feb 2024 - Aug 2024",
-  highlights: [
-    "Built and maintained a dynamic blog platform while collaborating across teams.",
-    "Developed REST APIs with Express.js, implemented JWT authentication, and improved performance.",
-    "Enhanced UX and reduced load times, improving engagement during internal testing.",
-  ],
 };
 
 export default function Experience() {
