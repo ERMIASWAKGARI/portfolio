@@ -3,6 +3,7 @@ import {
   faCode,
   faDatabase,
   faDesktop,
+  faDiagramProject,
   faServer,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,35 +13,46 @@ const Services = () => {
   const services = [
     {
       title: 'Full-Stack Development',
-      description: 'Building modern web applications for seamless experiences.',
+      description:
+        'Designing and building production-ready web apps with React, Node.js, and scalable architectures.',
       icon: faDesktop,
     },
     {
       title: 'Frontend Development',
-      description: 'Creating visually appealing, responsive interfaces.',
+      description:
+        'Creating responsive, accessible interfaces with a strong focus on UX performance and usability.',
       icon: faCode,
     },
     {
       title: 'Backend Development',
-      description: 'Building scalable server-side applications.',
+      description:
+        'Building secure APIs, authentication flows, and maintainable server-side services.',
       icon: faServer,
     },
     {
       title: 'Database Management',
-      description: 'Designing efficient databases with MongoDB and MySQL. ',
+      description:
+        'Designing reliable data layers using MongoDB, PostgreSQL, and MySQL.',
       icon: faDatabase,
     },
     {
       title: 'API Development',
-      description: 'Creating RESTful APIs and integrating services.',
+      description:
+        'Developing REST APIs and integrating external services into business workflows.',
       icon: faCloud,
+    },
+    {
+      title: 'System Design Support',
+      description:
+        'Turning requirements into technical plans with practical architecture and delivery strategy.',
+      icon: faDiagramProject,
     },
   ];
 
   return (
     <section
       id="services"
-      className="bg-[#f0f9ff] dark:bg-[#003049] text-secondary dark:text-neutral-white py-12 px-6 sm:px-8 md:px-16 lg:px-24 "
+      className="bg-[var(--bg)] px-4 py-14 text-[var(--text)] sm:px-6 sm:py-16 lg:px-16"
     >
       <div className="container mx-auto text-center">
         <motion.div
@@ -49,12 +61,12 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
         >
-          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-4 sm:mb-8">
-            What I Offer
+          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl mb-4 sm:mb-8">
+            Services
           </h2>
 
-          <p className="text-sm sm:text-base md:text-lg text-center text-secondary-dark dark:text-secondary-light mb-8 sm:mb-16">
-            Delivering cutting-edge solutions tailored to your needs.
+          <p className="mx-auto mb-8 max-w-2xl text-sm text-[var(--muted)] sm:mb-12 sm:text-base md:text-lg">
+            End-to-end engineering services for fast-moving products and teams.
           </p>
         </motion.div>
 
@@ -66,15 +78,17 @@ const Services = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.4, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="bg-neutral-white dark:bg-[#001d3d] shadow-md p-2 sm:p-2 md:p-4 lg:p-6 rounded-lg transition-transform transform hover:scale-105 duration-300 w-[calc(100%-3rem)] sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] "
+              className="w-[calc(100%-1rem)] rounded-2xl border border-[var(--border)] bg-[var(--card)] p-4 shadow-[var(--shadow)] transition-transform duration-300 hover:scale-[1.02] sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]"
             >
-              <div className="text-teal-400 mb-4">
+              <div className="mb-4 text-teal-500">
                 <FontAwesomeIcon icon={service.icon} size="2x" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-teal-400">
+              <h3 className="mb-2 text-lg font-semibold text-teal-600 dark:text-teal-300 sm:text-xl">
                 {service.title}
               </h3>
-              <p className="text-sm md:text-base">{service.description}</p>
+              <p className="text-sm text-[var(--muted)] md:text-base">
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>

@@ -15,6 +15,8 @@ export function ProjectGallery() {
   const [currentProject, setCurrentProject] = useState(null);
   const [direction, setDirection] = useState(1);
 
+  const fromPublic = (fileName) => ({ imageLink: `/${fileName}` });
+
   const projects = [
     {
       projectName: "DonateLink",
@@ -31,17 +33,26 @@ export function ProjectGallery() {
         "Nodemailer",
       ],
       images: [
-        { imageLink: "donate-link1.png" },
-        { imageLink: "donate-link2.png" },
-        { imageLink: "donate-link3.png" },
-        { imageLink: "donate-link4.png" },
-        { imageLink: "donate-link5.png" },
-        { imageLink: "donate-link6.png" },
-        { imageLink: "donate-link7.png" },
-        { imageLink: "donate-link8.png" },
-        { imageLink: "donate-link9.png" },
-        { imageLink: "donate-link10.png" },
-      ],
+        "donate-link1.png",
+        "donate-link2.png",
+        "donate-link3.png",
+        "donate-link4.png",
+        "donate-link5.png",
+        "donate-link6.png",
+        "donate-link7.png",
+        "donate-link8.png",
+        "donate-link9.png",
+        "donate-link10.png",
+        "donate-link11.png",
+        "donate-link12.png",
+        "donate-link13.png",
+        "donate-link14.png",
+        "donate-link15.png",
+        "donate-link16.png",
+        "donate-link17.png",
+        "donate-link18.png",
+        "donate-link19.png",
+      ].map(fromPublic),
       githubLink: "https://github.com/ERMIASWAKGARI/donatelink",
       deployedLink: "https://donate-link.netlify.app/",
       category: "Full Stack",
@@ -59,13 +70,16 @@ export function ProjectGallery() {
         "MongoDB",
       ],
       images: [
-        { imageLink: "gazette0.png" },
-        { imageLink: "gazette1.jpg" },
-        { imageLink: "gazette2.png" },
-        { imageLink: "gazettesignup.jpg" },
-        { imageLink: "gazettelogin.jpg" },
-        { imageLink: "gazette-full.jpg" },
-      ],
+        "gazette0.png",
+        "gazette1.jpg",
+        "gazette2.png",
+        "gazettesignup.jpg",
+        "gazettelogin.jpg",
+        "gazettecreatepost.jpg",
+        "gazettepost.jpg",
+        "gazetteprofile.jpg",
+        "gazette-full.jpg",
+      ].map(fromPublic),
       githubLink: "https://github.com/ERMIASWAKGARI/blog",
       deployedLink: "https://blog-peach-three-24.vercel.app/",
       category: "Full Stack",
@@ -76,16 +90,16 @@ export function ProjectGallery() {
         "National exit exam preparation platform with practice tests and performance tracking.",
       technologies: ["React", "TailwindCSS"],
       images: [
-        { imageLink: "softexit2.png" },
-        { imageLink: "softexit3.png" },
-        { imageLink: "softexit4.png" },
-        { imageLink: "softexit5.png" },
-        { imageLink: "softexit7.png" },
-        { imageLink: "softexit8.png" },
-        { imageLink: "softexit9.png" },
-        { imageLink: "softexit10.png" },
-        { imageLink: "softexit11.png" },
-      ],
+        "softexit2.png",
+        "softexit3.png",
+        "softexit4.png",
+        "softexit5.png",
+        "softexit7.png",
+        "softexit8.png",
+        "softexit9.png",
+        "softexit10.png",
+        "softexit11.png",
+      ].map(fromPublic),
       githubLink: "https://github.com/ERMIASWAKGARI/softexit",
       deployedLink: "https://softexitweb.netlify.app/",
       category: "Frontend",
@@ -105,12 +119,12 @@ export function ProjectGallery() {
         "Chappa",
       ],
       images: [
-        { imageLink: "ecommerce1.png" },
-        { imageLink: "ecommerce2.png" },
-        { imageLink: "ecommerce3.png" },
-        { imageLink: "ecommerce4.png" },
-        { imageLink: "ecommerce5.png" },
-      ],
+        "ecommerce1.png",
+        "ecommerce2.png",
+        "ecommerce3.png",
+        "ecommerce4.png",
+        "ecommerce5.png",
+      ].map(fromPublic),
       githubLink: "https://github.com/ERMIASWAKGARI/ShopNexus",
       category: "Full Stack",
     },
@@ -120,12 +134,13 @@ export function ProjectGallery() {
         "Interactive map application for tracking and sharing travel experiences.",
       technologies: ["React", "Mapbox", "Firebase", "Tailwind CSS"],
       images: [
-        { imageLink: "worldwise1.png" },
-        { imageLink: "worldwise2.png" },
-        { imageLink: "worldwise3.png" },
-        { imageLink: "worldwise4.png" },
-        { imageLink: "worldwise5.png" },
-      ],
+        "worldwise1.png",
+        "worldwise2.png",
+        "worldwise3.png",
+        "worldwise4.png",
+        "worldwise5.png",
+        "worldwise6.png",
+      ].map(fromPublic),
       githubLink: "https://github.com/ERMIASWAKGARI",
       // deployedLink: "https://worldwise-travel.vercel.app",
       category: "Frontend",
@@ -135,7 +150,7 @@ export function ProjectGallery() {
       description:
         "Educational social platform for connecting students and educators.",
       technologies: ["React", "Socket.io", "MongoDB", "JWT"],
-      images: [{ imageLink: "connectEducator1.png" }],
+      images: ["connectEducator1.png"].map(fromPublic),
       githubLink:
         "https://github.com/ERMIASWAKGARI/connectEducator-social-media-using-PHP",
       deployedLink: null,
@@ -171,7 +186,7 @@ export function ProjectGallery() {
           : (prevIndex + 1) % totalImages;
       });
     },
-    [currentProject]
+    [currentProject],
   );
 
   // Keyboard navigation
@@ -474,7 +489,7 @@ export function ProjectGallery() {
                 </div>
 
                 {/* Project Details - Scrollable */}
-                <div className="lg:w-80 p-6 border-l border-gray-200 dark:border-gray-700 overflow-y-auto">
+                <div className="lg:w-80 p-6 border-l border-gray-200 dark:border-gray-700 overflow-y-auto custom-scrollbar">
                   <div className="space-y-6">
                     {/* Description */}
                     <div>
@@ -540,7 +555,7 @@ export function ProjectGallery() {
                         <h3 className="font-semibold text-gray-900 dark:text-white mb-3">
                           All Images ({currentProject.images.length})
                         </h3>
-                        <div className="grid grid-cols-4 gap-2 max-h-32 overflow-y-auto overflow-hidden overscroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-700">
+                        <div className="grid grid-cols-4 gap-2 max-h-32 overflow-y-auto custom-scrollbar">
                           {currentProject.images.map((image, index) => (
                             <motion.button
                               key={index}
@@ -551,7 +566,7 @@ export function ProjectGallery() {
                               }`}
                               onClick={() => {
                                 setDirection(
-                                  index > currentImageIndex ? 1 : -1
+                                  index > currentImageIndex ? 1 : -1,
                                 );
                                 setCurrentImageIndex(index);
                               }}

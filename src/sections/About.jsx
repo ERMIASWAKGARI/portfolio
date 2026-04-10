@@ -1,6 +1,7 @@
 import { FaFilePdf } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 
 export default function About() {
   const ref = useRef(null);
@@ -17,7 +18,7 @@ export default function About() {
       },
       {
         threshold: 0.2,
-      }
+      },
     );
 
     if (ref.current) {
@@ -35,10 +36,10 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="py-12 sm:py-16 md:py-20 px-8 sm:px-12 md:px-16 bg-[#f0f9ff] dark:bg-[#003049]"
+      className="px-4 py-14 sm:px-6 sm:py-16 lg:px-16 bg-[var(--surface)]"
     >
       <motion.h2
-        className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-neutral-white mb-8 sm:mb-10"
+        className="mx-auto max-w-6xl text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl"
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -46,116 +47,117 @@ export default function About() {
         About Me
       </motion.h2>
 
-      <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 mx-auto max-w-screen-lg">
+      <div className="mx-auto mt-8 flex max-w-6xl flex-col gap-7 lg:flex-row lg:items-stretch">
         <motion.div
-          className="relative w-full lg:w-1/3 flex flex-col items-center text-center lg:text-left text-gray-900 dark:text-white py-6 px-4 sm:py-8 sm:px-6 shadow-lg rounded-lg"
+          className="w-full rounded-2xl border border-[var(--border)] bg-[var(--card)] p-6 shadow-[var(--shadow)] lg:w-[34%]"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={
             isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
           }
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
-          <div className="relative w-36 h-36 sm:w-44 sm:h-44 mb-4 sm:mb-6 rounded-full overflow-hidden border-4 border-teal-400 dark:border-teal-400">
+          <div className="mx-auto mb-4 h-36 w-36 overflow-hidden rounded-2xl border-4 border-teal-400/40 sm:h-40 sm:w-40">
             <img
-              src="my_pic.jpg"
+              src="/my_pic_1.jpeg"
               alt="Ermias Wakgari"
               className="w-full h-full object-cover"
             />
           </div>
 
-          <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">
-            ERMIAS WAKGARI
+          <h3 className="text-center text-xl font-semibold sm:text-2xl">
+            Ermias Wakgari Yadeta
           </h3>
-          <p className="text-sm sm:text-base italic mb-3 sm:mb-4">
-            Web Developer | Software Engineer
+          <p className="mt-2 text-center text-sm text-[var(--muted)] sm:text-base">
+            Software Engineer | Web Developer
           </p>
 
-          <div className="flex space-x-4 mt-4 sm:mt-6">
+          <div className="mt-5 space-y-3 text-sm sm:text-base">
             <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="text-purple-600 dark:text-teal-400 hover:text-purple-700 dark:hover:text-teal-500 transition text-xl"
+              href="mailto:ermiaswakgarisse5@gmail.com"
+              className="block rounded-xl border border-[var(--border)] px-3 py-2 hover:border-teal-400"
             >
-              <i className="fab fa-instagram"></i>
+              ermiaswakgarisse5@gmail.com
             </a>
             <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="text-purple-600 dark:text-teal-400 hover:text-purple-700 dark:hover:text-teal-500 transition text-xl"
+              href="tel:+251964495837"
+              className="block rounded-xl border border-[var(--border)] px-3 py-2 hover:border-teal-400"
             >
-              <i className="fab fa-facebook-f"></i>
+              +251 964 495 837
             </a>
             <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-              className="text-purple-600 dark:text-teal-400 hover:text-purple-700 dark:hover:text-teal-500 transition text-xl"
+              href="tel:+251710745103"
+              className="block rounded-xl border border-[var(--border)] px-3 py-2 hover:border-teal-400"
             >
-              <i className="fab fa-twitter"></i>
-            </a>
-
-            <a
-              href="https://telegram.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Telegram"
-              className="text-purple-600 dark:text-teal-400 hover:text-purple-700 dark:hover:text-teal-500 transition text-xl"
-            >
-              <i className="fab fa-telegram-plane"></i>
+              +251 710 745 103
             </a>
           </div>
+
+          <SocialMediaIcons justify="center" size={5} />
         </motion.div>
 
         <motion.div
-          className="lg:w-2/3 text-center lg:text-left"
+          className="rounded-2xl border border-[var(--border)] bg-[var(--card)] p-6 shadow-[var(--shadow)] lg:w-[66%]"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         >
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 mb-4 ">
-            Hi, I’m <strong>Ermias Wakgari</strong>, a passionate full-stack web
-            developer specializing in the MERN stack (MongoDB, Express, React,
-            Node.js). Based in Ethiopia, I thrive on creating interactive,
-            responsive, and scalable applications that solve real-world
-            problems.
+          <p className="text-sm leading-relaxed text-[var(--muted)] sm:text-base md:text-lg">
+            Adaptable and results-oriented Software Engineering graduate with
+            strong grounding in software architecture, system design, and
+            cross-functional teamwork. I build and maintain scalable products,
+            break down complex technical problems, and deliver code that stays
+            reliable under pressure.
           </p>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-200 mb-4">
-            With a strong foundation in both front-end and back-end development,
-            I focus on delivering seamless user experiences and efficient
-            server-side solutions. I’m committed to continuous learning and
-            innovation, ensuring that I stay ahead in this rapidly evolving
-            industry.
+
+          <p className="mt-4 text-sm leading-relaxed text-[var(--muted)] sm:text-base md:text-lg">
+            My core stack includes React, Node.js, Express.js, MongoDB,
+            PostgreSQL, and MySQL, supported by solid foundations in OOP,
+            algorithms, MVC, and CI/CD practices.
           </p>
-          <div className="mt-10 flex items-center gap-4 justify-start flex-col md:flex-row md:justify-center">
+
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+            {[
+              "JavaScript / TypeScript",
+              "Python",
+              "Java",
+              "C++",
+              "PHP",
+              "System Design",
+            ].map((item) => (
+              <span
+                key={item}
+                className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-3 py-2 text-center text-xs font-medium sm:text-sm"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
             <a
-              href="Resume.pdf"
+              href="/Resume.pdf"
               download
-              className="inline-flex  items-center justify-center bg-teal-400  hover:bg-teal-500 dark:bg-teal-400 dark:hover:bg-teal-500 text-[#000] py-2 px-4 rounded-lg hover:scale-105 transition duration-300 shadow-lg"
+              className="inline-flex items-center justify-center rounded-xl bg-teal-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-teal-400 sm:text-base"
               aria-label="Download CV"
             >
               <FaFilePdf className="mr-3" /> Download My CV
             </a>
 
-            <div className="flex justify-center space-x-6 sm:space-x-10">
-              <div className="text-center flex items-center gap-3 lg:gap-4">
-                <h4 className="text-xl sm:text-2xl font-bold text-gray-600 dark:text-gray-300">
-                  3+
+            <div className="flex gap-6">
+              <div>
+                <h4 className="text-2xl font-semibold text-teal-600 dark:text-teal-300">
+                  1+
                 </h4>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                <p className="text-xs text-[var(--muted)] sm:text-sm">
                   Years Experience
                 </p>
               </div>
-              <div className="text-center flex items-center gap-3 lg:gap-4">
-                <h4 className="text-xl sm:text-2xl font-bold text-gray-600 dark:text-gray-300">
-                  20+
+              <div>
+                <h4 className="text-2xl font-semibold text-teal-600 dark:text-teal-300">
+                  10+
                 </h4>
-                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-                  Projects Completed
+                <p className="text-xs text-[var(--muted)] sm:text-sm">
+                  Projects Built
                 </p>
               </div>
             </div>

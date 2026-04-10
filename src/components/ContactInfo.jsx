@@ -2,8 +2,10 @@ import SocialMediaIcons from "../components/SocialMediaIcons";
 
 export default function ContactInfo() {
   return (
-    <div className="max-w-lg  mx-auto p-6 text-sm sm:text-base md:text-lg bg-neutral-white dark:bg-[#001d3d] rounded-2xl shadow-xl">
-      <div className="mb-2">
+    <div className="mx-auto w-full rounded-2xl border border-[var(--border)] bg-[var(--card)] p-5 text-sm shadow-[var(--shadow)] sm:p-6 sm:text-base">
+      <h3 className="text-lg font-semibold sm:text-xl">Contact Information</h3>
+
+      <div className="mb-3 mt-4">
         <div className="flex items-center gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -25,16 +27,12 @@ export default function ContactInfo() {
             />
           </svg>
 
-          <span className="font-semibold text-gray-800 dark:text-secondary-light">
-            Location
-          </span>
+          <span className="font-semibold">Location</span>
         </div>
-        <p className="text-gray-700 dark:text-secondary-light ml-9">
-          Addis Ababa, Ethiopia
-        </p>
+        <p className="ml-9 text-[var(--muted)]">Addis Ababa, Ethiopia</p>
       </div>
 
-      <div className="mb-2">
+      <div className="mb-3">
         <div className="flex items-center gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,19 +49,21 @@ export default function ContactInfo() {
             />
           </svg>
 
-          <span className="font-semibold text-gray-800 dark:text-secondary-light">
-            Phone
-          </span>
+          <span className="font-semibold">Phone</span>
         </div>
-        <p className="text-gray-700 dark:text-secondary-light ml-9">
-          +251 937 920 510
+        <p className="ml-9 text-[var(--muted)]">
+          <a href="tel:+251964495837" className="hover:text-teal-500">
+            +251 964 495 837
+          </a>
         </p>
-        <p className="text-gray-700 dark:text-secondary-light ml-9">
-          +251 964 495 837
+        <p className="ml-9 text-[var(--muted)]">
+          <a href="tel:+251937920510" className="hover:text-teal-500">
+            +251 937 920 510
+          </a>
         </p>
       </div>
 
-      <div className="mb-2">
+      <div className="mb-3">
         <div className="flex items-center gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -80,18 +80,16 @@ export default function ContactInfo() {
             />
           </svg>
 
-          <span className="font-semibold text-gray-800 dark:text-secondary-light">
-            Email
-          </span>
+          <span className="font-semibold">Email</span>
         </div>
-        <p className="text-gray-700 dark:text-secondary-light ml-9">
+        <p className="ml-9 text-[var(--muted)]">
           <a href="mailto:ermiaswakgarisse5@gmail.com">
             ermiaswakgarisse5@gmail.com
           </a>
         </p>
       </div>
 
-      <div className="mb-2">
+      <div className="mb-3">
         <div className="flex items-center gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +97,38 @@ export default function ContactInfo() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6 text-primary"
+            className="size-6 text-teal-400"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V10.5m-7.5-4.5h7.5m0 0v7.5m0-7.5L10.5 16.5"
+            />
+          </svg>
+
+          <span className="font-semibold">Website</span>
+        </div>
+        <p className="ml-9 text-[var(--muted)]">
+          <a
+            href="https://ermiaswakgari.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-teal-500"
+          >
+            ermiaswakgari.me
+          </a>
+        </p>
+      </div>
+
+      <div>
+        <div className="flex items-center gap-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 text-teal-400"
           >
             <path
               strokeLinecap="round"
@@ -107,12 +136,10 @@ export default function ContactInfo() {
               d="M12 2.25C6.735 2.25 2.25 6.735 2.25 12c0 3.684 1.577 7.029 4.051 9.357-1.432-2.763-.354-6.446 2.316-7.334 1.06-.53 2.199-.628 3.319-.119 1.13.509 1.73 1.618 1.73 2.788V16.5c0 1.797 1.453 3.25 3.25 3.25h1.502c1.318 0 2.325-1.113 2.325-2.463v-1.156c0-.702-.38-1.365-.986-1.708-1.618-.884-3.056-1.14-4.526-.687-.245-.526-.485-1.07-.72-1.577-.369-.761-.745-1.41-1.19-1.88-.467-.493-.963-.929-1.506-1.285-2.542-1.732-4.85-.299-4.85 2.396 0 1.56 1.043 2.587 2.4 3.248l3.131.882c.518.148.848.622.848 1.188V18h.004c0 2.062 1.648 3.75 3.75 3.75h1.1a3.758 3.758 0 0 0 3.75-3.75V15.6c0-.84-.543-1.57-1.328-1.8-1.064-.276-2.176-.325-3.207-.126-.145-.495-.335-.985-.553-1.43-.288-.531-.605-1.047-.976-1.546-.598-.697-1.275-1.273-1.982-1.802C14.52 9.175 13.071 8.62 11.51 9.25 10.079 9.85 9.106 10.933 9.106 12c0 2.339 1.79 3.944 3.618 3.944h4.318c2.779 0 4.916-2.325 4.916-4.944 0-4.22-3.326-7.56-7.333-7.56z"
             />
           </svg>
-          <span className="font-semibold text-gray-800 dark:text-secondary-light">
-            Social Links
-          </span>
+          <span className="font-semibold">Social Links</span>
         </div>
-        <div className="flex gap-4 ml-9">
-          <SocialMediaIcons justify="start" size={2} />
+        <div className="ml-9">
+          <SocialMediaIcons justify="start" size={4} />
         </div>
       </div>
     </div>

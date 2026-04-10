@@ -1,176 +1,173 @@
 import { Typewriter } from "react-simple-typewriter";
-import Particles from "react-tsparticles";
 import { motion } from "framer-motion";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const Hero = () => {
   return (
-    <section className="relative bg-gray-50 dark:bg-[#001d3d] px-4 sm:px-6 md:px-10 lg:px-20 py-8 md:py-12 lg:py-8">
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 text-primary absolute top-4 sm:top-6 right-4 sm:right-6 transform -rotate-12"
-        >
-          <path
-            fill="currentColor"
-            d="M12 0L15.09 7.26L23.54 8.67L17.27 13.64L18.81 21.99L12 18.25L5.19 21.99L6.73 13.64L0.46 8.67L8.91 7.26L12 0Z"
-          ></path>
-        </svg>
+    <section
+      id="home"
+      className="relative overflow-hidden px-4 pb-14 pt-10 sm:px-6 lg:px-16 bg-[var(--bg)]"
+    >
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -left-20 top-10 h-64 w-64 rounded-full bg-teal-400/15 blur-3xl" />
+        <div className="absolute -right-16 bottom-0 h-72 w-72 rounded-full bg-orange-400/20 blur-3xl" />
       </div>
 
-      <Particles
-        id="tsparticles"
-        options={{
-          particles: {
-            number: { value: 30 },
-            size: { value: 2 },
-            move: { enable: true, speed: 0.5 },
-            line_linked: {
-              enable: true,
-              distance: 150,
-              color: "#38b2ac",
-              opacity: 0.5,
-            },
-          },
-        }}
-      />
-
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-14">
         <motion.div
-          className="text-center lg:text-left max-w-prose mx-auto"
+          className="mx-auto max-w-prose text-center lg:mx-0 lg:text-left"
           whileInView={{
             opacity: 1,
             y: 0,
-            transition: { duration: 1, ease: "easeOut" },
+            transition: { duration: 0.7, ease: "easeOut" },
           }}
-          initial={{ opacity: 0, y: 50 }}
-          viewport={{ once: false }}
+          initial={{ opacity: 0, y: 28 }}
+          viewport={{ once: true }}
         >
+          <p className="inline-flex rounded-full border border-teal-500/30 bg-teal-500/10 px-3 py-1 text-xs font-semibold tracking-wide text-teal-600 dark:text-teal-300">
+            Software Engineer | Web Developer
+          </p>
+
           <motion.h1
-            className="sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-secondary dark:text-secondary-light tracking-wide leading-snug"
+            className="mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl lg:text-5xl"
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { duration: 1, ease: "easeOut" },
+              transition: { duration: 0.7, ease: "easeOut" },
             }}
-            initial={{ opacity: 0, y: 30 }}
-            viewport={{ once: false }}
+            initial={{ opacity: 0, y: 24 }}
+            viewport={{ once: true }}
           >
-            Hello, I&apos;m{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-teal-500">
-              Ermias Wakgari
+            Ermias Wakgari Yadeta
+            <span className="block bg-gradient-to-r from-teal-500 via-cyan-500 to-amber-500 bg-clip-text text-transparent">
+              Building scalable products with clean engineering.
             </span>
           </motion.h1>
 
           <motion.p
-            className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-200 mb-4 mt-4 leading-relaxed"
+            className="mt-5 text-sm leading-relaxed text-[var(--muted)] sm:text-base lg:text-lg"
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { duration: 1, ease: "easeOut", delay: 0.2 },
+              transition: { duration: 0.7, ease: "easeOut", delay: 0.1 },
             }}
-            initial={{ opacity: 0, y: 30 }}
-            viewport={{ once: false }}
+            initial={{ opacity: 0, y: 24 }}
+            viewport={{ once: true }}
           >
-            I&apos;m a{" "}
-            <span className="text-teal-400 dark:text-teal-400">
+            I am a
+            <span className="ml-2 font-semibold text-teal-600 dark:text-teal-300">
               <Typewriter
                 words={[
-                  "MERN Stack Developer.",
-                  "Front-end Specialist.",
-                  "UI Designer.",
+                  "Full Stack Developer.",
+                  "React and Node.js Engineer.",
+                  "Problem-Solving Software Graduate.",
                 ]}
                 loop={true}
                 cursor
                 cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
+                typeSpeed={72}
+                deleteSpeed={45}
+                delaySpeed={1300}
               />
             </span>
           </motion.p>
 
           <motion.p
-            className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-200 mb-4 mt-4 leading-relaxed"
+            className="mt-4 text-sm leading-relaxed text-[var(--muted)] sm:text-base lg:text-lg"
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { duration: 1, ease: "easeOut", delay: 0.4 },
+              transition: { duration: 0.7, ease: "easeOut", delay: 0.2 },
             }}
-            initial={{ opacity: 0, y: 30 }}
-            viewport={{ once: false }}
+            initial={{ opacity: 0, y: 24 }}
+            viewport={{ once: true }}
           >
-            I design and build highly responsive, full-stack web applications.
-            With a focus on scalable and efficient solutions, I deliver
-            intuitive and user-friendly digital experiences.
+            Adaptable and results-oriented engineer, focused on designing
+            dependable software architecture, delivering maintainable code, and
+            shipping responsive web applications.
           </motion.p>
 
           <motion.div
-            className="mt-6 flex items-center justify-center space-x-4 sm:space-x-6 lg:space-x-8 lg:items-start lg:justify-start"
+            className="mt-7 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
             whileInView={{
               opacity: 1,
               y: 0,
-              transition: { duration: 1, ease: "easeOut", delay: 0.6 },
+              transition: { duration: 0.7, ease: "easeOut", delay: 0.3 },
             }}
-            initial={{ opacity: 0, y: 50 }}
-            viewport={{ once: false }}
+            initial={{ opacity: 0, y: 28 }}
+            viewport={{ once: true }}
           >
-            <button
-              aria-label="View my portfolio"
-              className="flex items-center justify-center bg-teal-400 text-[#000] py-2 px-4 rounded-lg hover:bg-teal-500 hover:scale-105 transition duration-300 shadow-lg"
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center rounded-xl bg-teal-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-teal-400 sm:text-base"
             >
-              <a href="#projects" className="flex items-center">
-                <span className="text-sm lg:text-base">View My Work</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  className="w-5 h-5 lg:w-6 lg:h-6 ml-2"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    d="M5 12h14m0 0l-6-6m6 6l-6 6"
-                  ></path>
-                </svg>
-              </a>
-            </button>
-
-            <button
-              aria-label="Learn more about me"
-              className="flex items-center justify-center border border-teal-400 text-[#000]  py-2 px-4 rounded-lg  hover:text-[#000] dark:text-[#2dd4bf]  hover:scale-105 transition duration-300 shadow-lg"
+              View Projects
+            </a>
+            <a
+              href="/Resume.pdf"
+              download
+              className="inline-flex items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--card)] px-4 py-2 text-sm font-semibold transition hover:border-teal-400 hover:text-teal-500 sm:text-base"
             >
-              <a href="#about" className="flex items-center">
-                <span className="text-sm lg:text-base">About Me</span>
-              </a>
-            </button>
+              Download CV
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center rounded-xl border border-[var(--border)] px-4 py-2 text-sm font-semibold transition hover:border-teal-400 hover:text-teal-500 sm:text-base"
+            >
+              Contact Me
+            </a>
           </motion.div>
 
-          <SocialMediaIcons justify="start" size={3} />
+          <SocialMediaIcons justify="start" size={5} />
         </motion.div>
 
         <motion.div
-          className="relative flex justify-center items-start"
+          className="relative flex justify-center"
           whileInView={{
             opacity: 1,
             x: 0,
-            transition: { duration: 1, ease: "easeOut", delay: 0.8 },
+            transition: { duration: 0.7, ease: "easeOut", delay: 0.35 },
           }}
-          initial={{ opacity: 0, x: 50 }}
-          viewport={{ once: false }}
+          initial={{ opacity: 0, x: 35 }}
+          viewport={{ once: true }}
         >
-          <img
-            src="/developeractivity.svg"
-            alt="Developer Illustration"
-            loading="lazy"
-            className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-full max-w-xs sm:max-w-sm lg:max-w-lg animate-refined-float mb-5"
-          />
-          <div className="absolute bottom-0 text-center bg-teal-400 bg-opacity-80 text-[#000]  py-2 px-4 rounded-md shadow-lg max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
-            <p className="text-sm sm:text-base lg:text-lg font-medium truncate">
-              &quot;Transforming Ideas into Scalable Solutions&quot;
-            </p>
+          <div className="w-full max-w-md rounded-3xl border border-[var(--border)] bg-[var(--card)] p-5 shadow-[var(--shadow)] sm:p-7">
+            <img
+              src="/my_pic_1.jpeg"
+              alt="Ermias Wakgari Yadeta"
+              loading="lazy"
+              className="mx-auto h-44 w-44 rounded-2xl object-cover ring-4 ring-teal-500/20 sm:h-52 sm:w-52"
+            />
+
+            <div className="mt-5 space-y-3 text-sm sm:text-base">
+              <div className="rounded-xl border border-[var(--border)] p-3">
+                <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
+                  Location
+                </p>
+                <p className="mt-1 font-medium">Addis Ababa, Ethiopia</p>
+              </div>
+              <div className="rounded-xl border border-[var(--border)] p-3">
+                <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
+                  Languages
+                </p>
+                <p className="mt-1 font-medium">
+                  English, Afaan Oromo, Amharic
+                </p>
+              </div>
+              <div className="rounded-xl border border-[var(--border)] p-3">
+                <p className="text-xs uppercase tracking-wide text-[var(--muted)]">
+                  Website
+                </p>
+                <a
+                  href="https://ermiaswakgari.me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 block font-medium text-teal-600 hover:underline dark:text-teal-300"
+                >
+                  ermiaswakgari.me
+                </a>
+              </div>
+            </div>
           </div>
         </motion.div>
       </div>

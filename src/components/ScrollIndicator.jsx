@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 
+const sections = [
+  "home",
+  "about",
+  "experience",
+  "education",
+  "skills",
+  "services",
+  "projects",
+  "contact",
+];
+
 function ScrollIndicator() {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const sections = [
-    "home",
-    "about",
-    "skills",
-    "services",
-    "projects",
-    "contact",
-    "footer",
-  ];
 
   useEffect(() => {
     const sectionElements = sections.map((id) => document.getElementById(id));
@@ -48,12 +48,12 @@ function ScrollIndicator() {
   };
 
   return (
-    <div className="fixed bottom-3 left-1/2 transform -translate-x-1/2 z-50 flex gap-4">
+    <div className="fixed bottom-5 left-4 z-40 hidden items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--card)] px-2 py-1 shadow-md md:flex">
       {currentSectionIndex > 0 && (
         <button
           onClick={() => handleScrollToSection(0)}
-          className="text-teal-600 dark:text-teal-400 text-2xl animate-bounce flex flex-col items-center"
-          aria-label="Scroll to previous section"
+          className="rounded-full p-1 text-teal-600 transition hover:bg-teal-500/10 dark:text-teal-300"
+          aria-label="Scroll to top"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ function ScrollIndicator() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6"
+            className="w-4 h-4"
           >
             <path
               strokeLinecap="round"
@@ -74,7 +74,7 @@ function ScrollIndicator() {
       {currentSectionIndex < sections.length - 1 && (
         <button
           onClick={() => handleScrollToSection(currentSectionIndex + 1)}
-          className="text-teal-600 dark:text-teal-400 text-2xl animate-bounce flex flex-col items-center"
+          className="rounded-full p-1 text-teal-600 transition hover:bg-teal-500/10 dark:text-teal-300"
           aria-label="Scroll to next section"
         >
           <svg
@@ -83,7 +83,7 @@ function ScrollIndicator() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6"
+            className="w-4 h-4"
           >
             <path
               strokeLinecap="round"
